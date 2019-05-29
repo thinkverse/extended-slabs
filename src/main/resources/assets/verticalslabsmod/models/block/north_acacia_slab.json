@@ -1,0 +1,7 @@
+{ "parent": "verticalslabsmod:block/north_slab",
+  "textures": {
+    "bottom": "minecraft:block/acacia_planks",
+    "top": "minecraft:block/acacia_planks",
+    "side": "minecraft:block/acacia_planks"
+  }
+}

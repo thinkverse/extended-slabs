@@ -1,0 +1,30 @@
+modLoader="javafml"
+loaderVersion="[25,)"
+
+[[mods]]
+    modId="verticalslabsmod"
+    version="${file.jarVersion}"
+    displayName="Vertical Slabs Mod"
+    displayURL="http://thinkverse.dev"
+    logoFile="examplemod.png"
+    credits="Clownvin, HarryTechRevs & SilentChaos512"
+    authors="Thinkverse"
+    description='''
+    This mod adds vertical slabs to minecraft.
+
+    Have fun!
+    '''
+
+[[dependencies.versecraft]]
+    modId="forge"
+    mandatory=true
+    versionRange="[25,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.versecraft]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.13.2]"
+    ordering="NONE"
+    side="BOTH"

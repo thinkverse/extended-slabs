@@ -1,0 +1,8 @@
+{ "variants": {
+    "type=north": { "model": "verticalslabsmod:block/north_birch_slab" },
+    "type=east": { "model": "verticalslabsmod:block/east_birch_slab" },
+    "type=south": { "model": "verticalslabsmod:block/south_birch_slab" },
+    "type=west": { "model": "verticalslabsmod:block/west_birch_slab" },
+    "type=double": { "model": "minecraft:block/birch_planks" }
+  }
+}

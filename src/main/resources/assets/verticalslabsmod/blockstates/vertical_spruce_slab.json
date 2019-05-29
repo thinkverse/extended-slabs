@@ -1,0 +1,8 @@
+{ "variants": {
+    "type=north": { "model": "verticalslabsmod:block/north_spruce_slab" },
+    "type=east": { "model": "verticalslabsmod:block/east_spruce_slab" },
+    "type=south": { "model": "verticalslabsmod:block/south_spruce_slab" },
+    "type=west": { "model": "verticalslabsmod:block/west_spruce_slab" },
+    "type=double": { "model": "minecraft:block/spruce_planks" }
+  }
+}
