@@ -1,7 +1,7 @@
 package dev.thinkverse.verticalslabsmod.util;
 
 import dev.thinkverse.verticalslabsmod.VerticalSlabsMod;
-import net.minecraft.init.Blocks;
+import dev.thinkverse.verticalslabsmod.lists.BlockList;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
@@ -10,6 +10,6 @@ public class CreativeTab extends ItemGroup {
 
     @Override
     public ItemStack createIcon() {
-        return new ItemStack(Blocks.CHEST);
+        return new ItemStack(BlockList.VERTICAL_OAK_SLAB);
     }
 }
