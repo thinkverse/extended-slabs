@@ -1,10 +1,10 @@
 package dev.thinkverse.verticalslabsmod.init;
 
 import com.google.common.base.Preconditions;
+import dev.thinkverse.verticalslabsmod.blocks.BlockVerticalSlab;
 import dev.thinkverse.verticalslabsmod.lists.BlockList;
 import dev.thinkverse.verticalslabsmod.lists.ItemBlockList;
 import dev.thinkverse.verticalslabsmod.VerticalSlabsMod;
-import dev.thinkverse.verticalslabsmod.blocks.BlockVerticalSlab;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;

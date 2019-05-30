@@ -1,4 +1,4 @@
-{ "parent": "verticalslabsmod:block/west_slab",
+{ "parent": "verticalslabsmod:block/slabs/inner/inner_vertical_slab",
   "textures": {
     "bottom": "minecraft:block/acacia_planks",
     "top": "minecraft:block/acacia_planks",

@@ -1,4 +1,4 @@
-{ "parent": "verticalslabsmod:block/west_slab",
+{ "parent": "verticalslabsmod:block/slabs/straight/vertical_slab",
   "textures": {
     "bottom": "minecraft:block/dark_oak_planks",
     "top": "minecraft:block/dark_oak_planks",

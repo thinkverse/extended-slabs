@@ -1,12 +1,15 @@
 package dev.thinkverse.verticalslabsmod.blocks;
 
-import dev.thinkverse.verticalslabsmod.blocks.types.VertSlabType;
+import dev.thinkverse.verticalslabsmod.blocks.shapes.VerticalSlabShape;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockHorizontal;
+import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.fluid.IFluidState;
 import net.minecraft.init.Fluids;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.BooleanProperty;
+import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.EnumProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
@@ -21,72 +24,191 @@ import javax.annotation.Nullable;
 
 public class BlockVerticalSlab extends Block {
 
-    public static final EnumProperty<VertSlabType> TYPE = EnumProperty.create("type", VertSlabType.class);
-
+    public static final DirectionProperty FACING = BlockHorizontal.HORIZONTAL_FACING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+    public static final EnumProperty<VerticalSlabShape> SHAPE = EnumProperty.create("shape", VerticalSlabShape.class);
 
     protected static final VoxelShape NORTH_SHAPE = Block.makeCuboidShape(0.0D, 16.0D, 0.0D, 16.0D, 0.0D, 8.0D);
-    protected static final VoxelShape EAST_SHAPE = Block.makeCuboidShape(8.0D, 16.0D, 0.0D, 16.0D, 0.0D, 16.0D);
+    protected static final VoxelShape EAST_SHAPE  = Block.makeCuboidShape(8.0D, 16.0D, 0.0D, 16.0D, 0.0D, 16.0D);
     protected static final VoxelShape SOUTH_SHAPE = Block.makeCuboidShape(0.0D, 16.0D, 16.0D, 16.0D, 0.0D, 8.0D);
-    protected static final VoxelShape WEST_SHAPE = Block.makeCuboidShape(0.0D, 16.0D, 0.0D, 8.0D, 0.0D, 16.0D);
+    protected static final VoxelShape WEST_SHAPE  = Block.makeCuboidShape(0.0D, 16.0D, 0.0D, 8.0D, 0.0D, 16.0D);
+
+    protected static final VoxelShape NORTH_OUTER_SHAPE  = Block.makeCuboidShape(0.0D, 16.0D, 0.0D, 8.0D, 0.0D, 8.0D);
+    protected static final VoxelShape EAST_OUTER_SHAPE  = Block.makeCuboidShape(8.0D, 16.0D, 0.0D, 16.0D, 0.0D, 8.0D);
+    protected static final VoxelShape SOUTH_OUTER_SHAPE  = Block.makeCuboidShape(8.0D, 16.0D, 16.0D, 16.0D, 0.0D, 8.0D);
+    protected static final VoxelShape WEST_OUTER_SHAPE  = Block.makeCuboidShape(0.0D, 16.0D, 8.0D, 8.0D, 0.0D, 16.0D);
 
     public BlockVerticalSlab(Block.Properties builder) {
         super(builder);
-        this.setDefaultState(this.getDefaultState().with(TYPE, VertSlabType.EAST).with(WATERLOGGED, Boolean.valueOf(false)));
+        this.setDefaultState(this.stateContainer.getBaseState().with(FACING, EnumFacing.NORTH).with(SHAPE, VerticalSlabShape.STRAIGHT).with(WATERLOGGED, Boolean.valueOf(false)));
     }
 
     @Override
     protected void fillStateContainer(StateContainer.Builder<Block, IBlockState> builder) {
-        builder.add(TYPE, WATERLOGGED);
+        builder.add(FACING, SHAPE, WATERLOGGED);
     }
 
     @Override
     @SuppressWarnings("deprecation")
     public boolean isFullCube(IBlockState state) {
-        return state.get(TYPE) == VertSlabType.DOUBLE;
+        return false;
+    }
+
+    @Override
+    @SuppressWarnings("deprecation")
+    public BlockFaceShape getBlockFaceShape(IBlockReader worldIn, IBlockState state, BlockPos pos, EnumFacing face) {
+        VerticalSlabShape verticalslabshape = state.get(SHAPE);
+        if (verticalslabshape != VerticalSlabShape.OUTER_LEFT && verticalslabshape != VerticalSlabShape.OUTER_RIGHT) {
+            EnumFacing enumfacing = state.get(FACING);
+            switch(verticalslabshape) {
+                case STRAIGHT:
+                    return enumfacing == face ? BlockFaceShape.SOLID : BlockFaceShape.UNDEFINED;
+                case INNER_LEFT:
+                    return enumfacing != face && enumfacing != face.rotateY() ? BlockFaceShape.UNDEFINED : BlockFaceShape.SOLID;
+                case INNER_RIGHT:
+                    return enumfacing != face && enumfacing != face.rotateYCCW() ? BlockFaceShape.UNDEFINED : BlockFaceShape.SOLID;
+                default:
+                    return BlockFaceShape.UNDEFINED;
+            }
+        } else {
+            return BlockFaceShape.UNDEFINED;
+        }
     }
 
     @Override
     @SuppressWarnings("deprecation")
     public VoxelShape getShape(IBlockState state, IBlockReader worldIn, BlockPos pos) {
-        VertSlabType slabtype = state.get(TYPE);
-        switch(slabtype) {
-            case DOUBLE:
-                return VoxelShapes.fullCube();
+        VerticalSlabShape verticalslabshape = state.get(SHAPE);
+        EnumFacing enumfacing = state.get(FACING);
+
+        if (verticalslabshape != VerticalSlabShape.STRAIGHT) {
+            switch(verticalslabshape) {
+                case OUTER_LEFT:
+                    return getOuterLeftFacingShapes(enumfacing);
+                case OUTER_RIGHT:
+                    return getOuterRightFacingShapes(enumfacing);
+                case INNER_LEFT:
+                    return getInnerLeftFacingShapes(enumfacing);
+                case INNER_RIGHT:
+                    return getInnerRightFacingShapes(enumfacing);
+                default:
+                    return getStraightFacingShapes(enumfacing);
+            }
+        } else {
+            return getStraightFacingShapes(enumfacing);
+        }
+    }
+
+    private static VoxelShape getStraightFacingShapes(EnumFacing facing) {
+        switch (facing) {
             case WEST:
-                return WEST_SHAPE;
+                return (VoxelShape) WEST_SHAPE;
             case EAST:
-                return EAST_SHAPE;
+                return (VoxelShape) EAST_SHAPE;
             case SOUTH:
-                return SOUTH_SHAPE;
+                return (VoxelShape) SOUTH_SHAPE;
             default:
-                return NORTH_SHAPE;
+                return (VoxelShape) NORTH_SHAPE;
+        }
+    }
+
+    private static VoxelShape getOuterLeftFacingShapes(EnumFacing facing) {
+        switch (facing) {
+            case WEST:
+                return (VoxelShape) WEST_OUTER_SHAPE;
+            case EAST:
+                return (VoxelShape) EAST_OUTER_SHAPE;
+            case SOUTH:
+                return (VoxelShape) SOUTH_OUTER_SHAPE;
+            default:
+                return (VoxelShape) NORTH_OUTER_SHAPE;
+        }
+    }
+
+    private static VoxelShape getInnerLeftFacingShapes(EnumFacing facing) {
+        switch (facing) {
+            case WEST:
+                return (VoxelShape) VoxelShapes.or(WEST_SHAPE, SOUTH_SHAPE);
+            case EAST:
+                return (VoxelShape) VoxelShapes.or(EAST_SHAPE, NORTH_SHAPE);
+            case SOUTH:
+                return (VoxelShape) VoxelShapes.or(SOUTH_SHAPE, EAST_SHAPE);
+            default:
+                return (VoxelShape) VoxelShapes.or(NORTH_SHAPE, WEST_SHAPE);
+        }
+    }
+
+    private static VoxelShape getOuterRightFacingShapes(EnumFacing facing) {
+        switch (facing) {
+            case WEST:
+                return (VoxelShape) NORTH_OUTER_SHAPE;
+            case EAST:
+                return (VoxelShape) SOUTH_OUTER_SHAPE;
+            case SOUTH:
+                return (VoxelShape) WEST_OUTER_SHAPE;
+            default:
+                return (VoxelShape) EAST_OUTER_SHAPE;
+        }
+    }
+
+    private static VoxelShape getInnerRightFacingShapes(EnumFacing facing) {
+        switch (facing) {
+            case WEST:
+                return (VoxelShape) VoxelShapes.or(WEST_SHAPE, NORTH_SHAPE);
+            case EAST:
+                return (VoxelShape) VoxelShapes.or(EAST_SHAPE, SOUTH_SHAPE);
+            case SOUTH:
+                return (VoxelShape) VoxelShapes.or(SOUTH_SHAPE, WEST_SHAPE);
+            default:
+                return (VoxelShape) VoxelShapes.or(NORTH_SHAPE, EAST_SHAPE);
         }
     }
 
     @Nullable
     @Override
     public IBlockState getStateForPlacement(BlockItemUseContext context) {
-        IBlockState iblockstate = context.getWorld().getBlockState(context.getPos());
-        if (iblockstate.getBlock() == this) {
-            return iblockstate.with(TYPE, VertSlabType.DOUBLE).with(WATERLOGGED, Boolean.valueOf(false));
-        } else {
-            IFluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
-            IBlockState iblockstate1 = this.getDefaultState().with(TYPE, VertSlabType.EAST).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
-            EnumFacing enumfacing = context.getNearestLookingDirection();
+        EnumFacing enumfacing = context.getFace();
+        IFluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
+        IBlockState iblockstate = this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing()).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
+        return iblockstate.with(SHAPE, getSlabShape(iblockstate, context.getWorld(), context.getPos()));
+    }
 
-            switch (enumfacing) {
-                case NORTH:
-                    return iblockstate1.with(TYPE, VertSlabType.NORTH).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
-                case EAST:
-                default:
-                    return iblockstate1;
-                case SOUTH:
-                    return iblockstate1.with(TYPE, VertSlabType.SOUTH).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
-                case WEST:
-                    return iblockstate1.with(TYPE, VertSlabType.WEST).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
+    private static VerticalSlabShape getSlabShape(IBlockState state, IBlockReader worldIn, BlockPos pos) {
+        EnumFacing enumfacing = state.get(FACING);
+        IBlockState iblockstate = worldIn.getBlockState(pos.offset(enumfacing));
+        if (isBlockVerticalSlab(iblockstate)) {
+            EnumFacing enumfacing1 = iblockstate.get(FACING);
+            if (enumfacing1.getAxis() != state.get(FACING).getAxis() && isDifferentVerticalSlab(state, worldIn, pos, enumfacing1.getOpposite())) {
+                if (enumfacing1 == enumfacing.rotateYCCW()) {
+                    return VerticalSlabShape.OUTER_LEFT;
+                }
+
+                return VerticalSlabShape.OUTER_RIGHT;
             }
         }
+
+        IBlockState iblockstate1 = worldIn.getBlockState(pos.offset(enumfacing.getOpposite()));
+        if (isBlockVerticalSlab(iblockstate1)) {
+            EnumFacing enumfacing2 = iblockstate1.get(FACING);
+            if (enumfacing2.getAxis() != state.get(FACING).getAxis() && isDifferentVerticalSlab(state, worldIn, pos, enumfacing2)) {
+                if (enumfacing2 == enumfacing.rotateYCCW()) {
+                    return VerticalSlabShape.INNER_LEFT;
+                }
+
+                return VerticalSlabShape.INNER_RIGHT;
+            }
+        }
+
+        return VerticalSlabShape.STRAIGHT;
+    }
+
+    private static boolean isDifferentVerticalSlab(IBlockState state, IBlockReader worldIn, BlockPos pos, EnumFacing enumFacing) {
+        IBlockState iblockstate = worldIn.getBlockState(pos.offset(enumFacing));
+        return !isBlockVerticalSlab(iblockstate) || iblockstate.get(FACING) != state.get(FACING);
+    }
+
+    public static boolean isBlockVerticalSlab(IBlockState state) {
+        return state.getBlock() instanceof BlockVerticalSlab;
     }
 
     @Override
