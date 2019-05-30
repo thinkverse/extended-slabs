@@ -3,10 +3,11 @@
   "1.13.2": {
     "0.1.1": "Initial alpha version", 
     "0.2.0": "Updated how Vertical Slabs are used", 
-    "0.2.1": "Added support for update checker"
+    "0.2.1": "Added support for update checker",
+    "0.3.0": "All slabs now have a Vertical variant"
   },
   "promos": {
-    "1.13.2-latest": "0.2.1",
-    "1.13.2-recommended": "0.2.0"
+    "1.13.2-latest": "0.3.0",
+    "1.13.2-recommended": "0.3.0"
   }
 }
