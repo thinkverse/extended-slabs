@@ -1,4 +1,4 @@
-{ "parent": "verticalslabsmod:block/east_slab",
+{ "parent": "verticalslabsmod:block/slabs/outer/outer_vertical_slab",
   "textures": {
     "bottom": "minecraft:block/jungle_planks",
     "top": "minecraft:block/jungle_planks",

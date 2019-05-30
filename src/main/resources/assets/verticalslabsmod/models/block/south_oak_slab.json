@@ -1,7 +1,0 @@
-{ "parent": "verticalslabsmod:block/south_slab",
-  "textures": {
-    "bottom": "minecraft:block/oak_planks",
-    "top": "minecraft:block/oak_planks",
-    "side": "minecraft:block/oak_planks"
-  }
-}

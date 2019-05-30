@@ -17,5 +17,15 @@
   "item.verticalslabsmod.vertical_birch_slab": "Vertical Birch Slab",
   "item.verticalslabsmod.vertical_oak_slab": "Vertical Oak Slab",
 
-  "itemGroup.verticalslabsmod": "Vertical Slabs Mod"
+  "itemGroup.verticalslabsmod": "Vertical Slabs Mod",
+
+  "block.verticalslabsmod.en_oak_slab": "EAST NORTH Slab",
+  "block.verticalslabsmod.es_oak_slab": "EAST SOUTH Slab",
+  "block.verticalslabsmod.wn_oak_slab": "WEST NORTH Slab",
+  "block.verticalslabsmod.ws_oak_slab": "WEST SOUTH Slab",
+
+  "item.verticalslabsmod.en_oak_slab": "EAST NORTH Slab",
+  "item.verticalslabsmod.es_oak_slab": "EAST SOUTH Slab",
+  "item.verticalslabsmod.wn_oak_slab": "WEST NORTH Slab",
+  "item.verticalslabsmod.ws_oak_slab": "WEST SOUTH Slab"
 }

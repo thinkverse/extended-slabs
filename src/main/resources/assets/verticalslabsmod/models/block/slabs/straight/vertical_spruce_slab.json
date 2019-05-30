@@ -1,4 +1,4 @@
-{ "parent": "verticalslabsmod:block/south_slab",
+{ "parent": "verticalslabsmod:block/slabs/straight/vertical_slab",
   "textures": {
     "bottom": "minecraft:block/spruce_planks",
     "top": "minecraft:block/spruce_planks",
