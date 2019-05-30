@@ -1,0 +1,12 @@
+{
+  "homepage": "https://minecraft.curseforge.com/projects/vertical-slabs-mod",
+  "1.13.2": {
+    "0.1.1": "Initial alpha version", 
+    "0.2.0": "Updated how Vertical Slabs are used", 
+    "0.2.1": "Added support for update checker"
+  },
+  "promos": {
+    "1.13.2-latest": "0.2.1",
+    "1.13.2-recommended": "0.2.0"
+  }
+}
