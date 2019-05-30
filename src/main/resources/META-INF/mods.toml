@@ -1,11 +1,13 @@
 modLoader="javafml"
 loaderVersion="[25,)"
+updateJSONURL="https://thinkverse.dev/vertical_slabs/update/"
+issueTrackerURL="https://github.com/thinkverse/vertical_slabs/issues"
 
 [[mods]]
     modId="verticalslabsmod"
     version="${file.jarVersion}"
     displayName="Vertical Slabs Mod"
-    displayURL="http://thinkverse.dev"
+    displayURL="https://thinkverse.dev"
     logoFile="examplemod.png"
     credits="Clownvin, HarryTechRevs & SilentChaos512"
     authors="Thinkverse"
