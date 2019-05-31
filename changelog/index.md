@@ -6,7 +6,7 @@ init: alpha version
 
 **0.2.0**
 
-update: vertical slabs are used stairs as basen
+update: vertical slabs now use stairs as it's base
 
 **0.2.1**
 
