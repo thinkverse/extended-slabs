@@ -17,7 +17,7 @@ import java.util.Random;
 public class VerticalSlabsMod
 {
     public static final String MODID = "verticalslabsmod";
-    public static final String VERSION = "0.3.1";
+    public static final String VERSION = "0.3.2";
 
     public static VerticalSlabsMod INSTANCE;
     public static Proxy PROXY;

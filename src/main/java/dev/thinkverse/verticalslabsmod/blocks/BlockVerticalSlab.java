@@ -3,8 +3,11 @@ package dev.thinkverse.verticalslabsmod.blocks;
 import dev.thinkverse.verticalslabsmod.blocks.shapes.VerticalSlabShape;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockHorizontal;
+import net.minecraft.block.IBucketPickupHandler;
+import net.minecraft.block.ILiquidContainer;
 import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.IFluidState;
 import net.minecraft.init.Fluids;
 import net.minecraft.item.BlockItemUseContext;
@@ -22,8 +25,7 @@ import net.minecraft.world.IWorld;
 
 import javax.annotation.Nullable;
 
-public class BlockVerticalSlab extends Block {
-
+public class BlockVerticalSlab extends Block implements IBucketPickupHandler, ILiquidContainer {
     public static final DirectionProperty FACING = BlockHorizontal.HORIZONTAL_FACING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final EnumProperty<VerticalSlabShape> SHAPE = EnumProperty.create("shape", VerticalSlabShape.class);
@@ -64,9 +66,8 @@ public class BlockVerticalSlab extends Block {
                 case STRAIGHT:
                     return enumfacing == face ? BlockFaceShape.SOLID : BlockFaceShape.UNDEFINED;
                 case INNER_LEFT:
-                    return enumfacing != face && enumfacing != face.rotateY() ? BlockFaceShape.UNDEFINED : BlockFaceShape.SOLID;
                 case INNER_RIGHT:
-                    return enumfacing != face && enumfacing != face.rotateYCCW() ? BlockFaceShape.UNDEFINED : BlockFaceShape.SOLID;
+                    return enumfacing != face ? BlockFaceShape.UNDEFINED : BlockFaceShape.SOLID;
                 default:
                     return BlockFaceShape.UNDEFINED;
             }
@@ -222,8 +223,38 @@ public class BlockVerticalSlab extends Block {
     }
 
     @Override
+    public Fluid pickupFluid(IWorld worldIn, BlockPos pos, IBlockState state) {
+        if (state.get(WATERLOGGED)) {
+            worldIn.setBlockState(pos, state.with(WATERLOGGED, Boolean.valueOf(false)), 3);
+            return Fluids.WATER;
+        } else {
+            return Fluids.EMPTY;
+        }
+    }
+
+    @Override
     @SuppressWarnings("deprecation")
     public IFluidState getFluidState(IBlockState state) {
         return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
     }
+
+    @Override
+    public boolean canContainFluid(IBlockReader worldIn, BlockPos pos, IBlockState state, Fluid fluidIn) {
+        return !state.get(WATERLOGGED) && fluidIn == Fluids.WATER;
+    }
+
+    @Override
+    public boolean receiveFluid(IWorld worldIn, BlockPos pos, IBlockState state, IFluidState fluidStateIn) {
+        if (!state.get(WATERLOGGED) && fluidStateIn.getFluid() == Fluids.WATER) {
+            if (!worldIn.isRemote()) {
+                worldIn.setBlockState(pos, state.with(WATERLOGGED, Boolean.valueOf(true)), 3);
+                worldIn.getPendingFluidTicks().scheduleTick(pos, fluidStateIn.getFluid(), fluidStateIn.getFluid().getTickRate(worldIn));
+            }
+
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
