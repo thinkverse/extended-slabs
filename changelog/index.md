@@ -25,3 +25,7 @@ fix: update checker
 fix: rotation bug introduced by waterlogging inner vertical slabs now fixed.
 
 update: waterlogging vertical slabs now works as it should.
+
+**0.3.3**
+
+update: refactoring in preperation for future updates.
