@@ -1,7 +1,7 @@
 package dev.thinkverse.verticalslabsmod.util;
 
-import dev.thinkverse.verticalslabsmod.VerticalSlabsMod;
-import dev.thinkverse.verticalslabsmod.lists.BlockList;
+import dev.thinkverse.verticalslabsmod.core.VerticalSlabsMod;
+import dev.thinkverse.verticalslabsmod.api.block.BlockList;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 

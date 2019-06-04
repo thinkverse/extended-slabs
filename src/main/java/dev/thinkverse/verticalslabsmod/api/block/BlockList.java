@@ -1,6 +1,6 @@
-package dev.thinkverse.verticalslabsmod.lists;
+package dev.thinkverse.verticalslabsmod.api.block;
 
-import dev.thinkverse.verticalslabsmod.VerticalSlabsMod;
+import dev.thinkverse.verticalslabsmod.core.VerticalSlabsMod;
 import net.minecraft.block.Block;
 import net.minecraftforge.registries.ObjectHolder;
 
