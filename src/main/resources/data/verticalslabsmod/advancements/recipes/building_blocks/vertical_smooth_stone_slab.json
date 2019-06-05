@@ -1,7 +1,7 @@
 { "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [ 
-      "verticalslabsmod:vertical_stone_slab"
+      "verticalslabsmod:vertical_smooth_stone_slab"
     ]
   },
   "criteria": {
@@ -18,7 +18,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "verticalslabsmod:vertical_stone_slab"
+        "recipe": "verticalslabsmod:vertical_smooth_stone_slab"
       }
     }
   },
