@@ -9,6 +9,8 @@ import static dev.thinkverse.verticalslabsmod.util.InjectionUtil.Null;
 @ObjectHolder(VerticalSlabsMod.MODID)
 public class BlockList {
     /* Slabs */
+    public static Block DIRT_SLAB = Null();
+    public static Block STONE_SLAB = Null();
     public static Block GRASS_SLAB = Null();
     public static Block ANDESITE_SLAB = Null();
     public static Block POLISHED_ANDESITE_SLAB = Null();
@@ -28,8 +30,8 @@ public class BlockList {
 
     /* Stairs */
     public static Block GRASS_STAIRS = Null();
-
-    /* Not Added yet */
+    public static Block DIRT_STAIRS = Null();
+    public static Block STONE_STAIRS = Null();
     public static Block ANDESITE_STAIRS = Null();
     public static Block POLISHED_ANDESITE_STAIRS = Null();
     public static Block GRANITE_STAIRS = Null();
@@ -68,6 +70,8 @@ public class BlockList {
     public static Block VERTICAL_PRISMARINE_SLAB = Null();
 
     /* Not Added yet */
+    public static Block VERTICAL_DIRT_SLAB = Null();
+    public static Block VERTICAL_STONE_SLAB = Null();
     public static Block VERTICAL_ANDESITE_SLAB = Null();
     public static Block VERTICAL_POLISHED_ANDESITE_SLAB = Null();
     public static Block VERTICAL_GRANITE_SLAB = Null();

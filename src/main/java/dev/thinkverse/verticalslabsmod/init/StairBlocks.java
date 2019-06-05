@@ -43,6 +43,8 @@ public class StairBlocks {
 
                 BlockList.END_STONE_BRICKS_STAIRS = new BlockCustomStairs(Blocks.END_STONE_BRICKS.getDefaultState(), Block.Properties.from(Blocks.END_STONE_BRICKS)).setRegistryName(VerticalSlabsMod.location("end_stone_bricks_stairs")),
 
+                BlockList.STONE_STAIRS = new BlockGrassStairs(Blocks.STONE.getDefaultState(), Block.Properties.from(Blocks.STONE)).setRegistryName(VerticalSlabsMod.location("stone_stairs")),
+                BlockList.DIRT_STAIRS = new BlockGrassStairs(Blocks.DIRT.getDefaultState(), Block.Properties.from(Blocks.DIRT)).setRegistryName(VerticalSlabsMod.location("dirt_stairs")),
                 BlockList.GRASS_STAIRS = new BlockGrassStairs(Blocks.GRASS_BLOCK.getDefaultState(), Block.Properties.from(Blocks.GRASS_BLOCK)).setRegistryName(VerticalSlabsMod.location("grass_stairs"))
             };
 
@@ -76,6 +78,8 @@ public class StairBlocks {
 
                 new ItemBlock(BlockList.END_STONE_BRICKS_STAIRS, new Item.Properties().group(VerticalSlabsMod.GROUP).maxStackSize(64)),
 
+                new ItemBlock(BlockList.STONE_STAIRS, new Item.Properties().group(VerticalSlabsMod.GROUP).maxStackSize(64)),
+                new ItemBlock(BlockList.DIRT_STAIRS, new Item.Properties().group(VerticalSlabsMod.GROUP).maxStackSize(64)),
                 new ItemBlock(BlockList.GRASS_STAIRS, new Item.Properties().group(VerticalSlabsMod.GROUP).maxStackSize(64))
             };
 

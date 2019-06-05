@@ -43,6 +43,8 @@ public class SlabBlocks {
 
                 BlockList.END_STONE_BRICKS_SLAB = new BlockSlab(Block.Properties.from(Blocks.END_STONE_BRICKS)).setRegistryName(VerticalSlabsMod.location("end_stone_bricks_slab")),
 
+                BlockList.STONE_SLAB = new BlockGrassSlab(Block.Properties.from(Blocks.STONE)).setRegistryName(VerticalSlabsMod.location("stone_slab")),
+                BlockList.DIRT_SLAB = new BlockGrassSlab(Block.Properties.from(Blocks.DIRT)).setRegistryName(VerticalSlabsMod.location("dirt_slab")),
                 BlockList.GRASS_SLAB = new BlockGrassSlab(Block.Properties.from(Blocks.GRASS_BLOCK)).setRegistryName(VerticalSlabsMod.location("grass_slab"))
             };
 
@@ -76,6 +78,8 @@ public class SlabBlocks {
 
                 new ItemBlock(BlockList.END_STONE_BRICKS_SLAB, new Item.Properties().group(VerticalSlabsMod.GROUP).maxStackSize(64)),
 
+                new ItemBlock(BlockList.STONE_SLAB, new Item.Properties().group(VerticalSlabsMod.GROUP).maxStackSize(64)),
+                new ItemBlock(BlockList.DIRT_SLAB, new Item.Properties().group(VerticalSlabsMod.GROUP).maxStackSize(64)),
                 new ItemBlock(BlockList.GRASS_SLAB, new Item.Properties().group(VerticalSlabsMod.GROUP).maxStackSize(64))
             };
 

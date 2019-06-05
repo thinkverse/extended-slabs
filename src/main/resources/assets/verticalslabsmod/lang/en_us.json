@@ -19,8 +19,10 @@
   "block.verticalslabsmod.smooth_red_sandstone_stairs": "Smooth Red Sandstone Stairs",
   "block.verticalslabsmod.smooth_quartz_stairs": "Smooth Quartz Stairs",
   "block.verticalslabsmod.red_nether_bricks_stairs": "Red Nether Bricks Stairs",
-  "block.verticalslabsmod.end_stone_bricks_stairs": "Grass Stairs",
+  "block.verticalslabsmod.end_stone_bricks_stairs": "End Stone Bricks Stairs",
   "block.verticalslabsmod.grass_stairs": "Grass Stairs",
+  "block.verticalslabsmod.stone_stairs": "Stone Stairs",
+  "block.verticalslabsmod.dirt_stairs": "Dirt Stairs",
 
   "block.verticalslabsmod.polished_andesite_slab": "Polished Andesite Slab",
   "block.verticalslabsmod.polished_diorite_slab": "Polished Diorite Slab",
@@ -36,8 +38,10 @@
   "block.verticalslabsmod.smooth_red_sandstone_slab": "Smooth Red Sandstone Slab",
   "block.verticalslabsmod.smooth_quartz_slab": "Smooth Quartz Slab",
   "block.verticalslabsmod.red_nether_bricks_slab": "Red Nether Bricks Slab",
-  "block.verticalslabsmod.end_stone_bricks_slab": "Grass Slab",
+  "block.verticalslabsmod.end_stone_bricks_slab": "End Stone Bricks Slab",
   "block.verticalslabsmod.grass_slab": "Grass Slab",
+  "block.verticalslabsmod.stone_slab": "Stone Slab",
+  "block.verticalslabsmod.dirt_slab": "Dirt Slab",
 
   "block.verticalslabsmod.vertical_dark_oak_slab": "Vertical Dark Oak Slab",
   "block.verticalslabsmod.vertical_spruce_slab": "Vertical Spruce Slab",
