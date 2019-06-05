@@ -34,20 +34,20 @@ public class VerticalBlocks {
 
                 BlockList.VERTICAL_COBBLESTONE_SLAB = new BlockVerticalSlab(Block.Properties.from(Blocks.COBBLESTONE_SLAB)).setRegistryName(VerticalSlabsMod.location("vertical_cobblestone_slab")),
                 BlockList.VERTICAL_ANDESITE_SLAB = new BlockVerticalSlab(Block.Properties.from(Blocks.ANDESITE)).setRegistryName(VerticalSlabsMod.location("vertical_andesite_slab")),
-                BlockList.VERTICAL_STONE_BRICK_SLAB = new BlockVerticalSlab(Block.Properties.from(Blocks.STONE_BRICK_SLAB)).setRegistryName(VerticalSlabsMod.location("vertical_stone_brick_slab")),
+                BlockList.VERTICAL_STONE_BRICKS_SLAB = new BlockVerticalSlab(Block.Properties.from(Blocks.STONE_BRICK_SLAB)).setRegistryName(VerticalSlabsMod.location("vertical_stone_bricks_slab")),
                 BlockList.VERTICAL_SMOOTH_STONE_SLAB = new BlockVerticalSlab(Block.Properties.from(Blocks.STONE_SLAB)).setRegistryName(VerticalSlabsMod.location("vertical_smooth_stone_slab")),
 
                 BlockList.VERTICAL_RED_SANDSTONE_SLAB = new BlockVerticalSlab(Block.Properties.from(Blocks.RED_SANDSTONE_SLAB)).setRegistryName(VerticalSlabsMod.location("vertical_red_sandstone_slab")),
                 BlockList.VERTICAL_SANDSTONE_SLAB = new BlockVerticalSlab(Block.Properties.from(Blocks.SANDSTONE_SLAB)).setRegistryName(VerticalSlabsMod.location("vertical_sandstone_slab")),
 
-                BlockList.VERTICAL_BRICK_SLAB = new BlockVerticalSlab(Block.Properties.from(Blocks.BRICK_SLAB)).setRegistryName(VerticalSlabsMod.location("vertical_brick_slab")),
+                BlockList.VERTICAL_BRICKS_SLAB = new BlockVerticalSlab(Block.Properties.from(Blocks.BRICK_SLAB)).setRegistryName(VerticalSlabsMod.location("vertical_bricks_slab")),
 
-                BlockList.VERTICAL_NETHER_BRICK_SLAB = new BlockVerticalSlab(Block.Properties.from(Blocks.NETHER_BRICK_SLAB)).setRegistryName(VerticalSlabsMod.location("vertical_nether_brick_slab")),
+                BlockList.VERTICAL_NETHER_BRICKS_SLAB = new BlockVerticalSlab(Block.Properties.from(Blocks.NETHER_BRICK_SLAB)).setRegistryName(VerticalSlabsMod.location("vertical_nether_bricks_slab")),
                 BlockList.VERTICAL_QUARTZ_SLAB = new BlockVerticalSlab(Block.Properties.from(Blocks.QUARTZ_SLAB)).setRegistryName(VerticalSlabsMod.location("vertical_quartz_slab")),
 
                 BlockList.VERTICAL_PURPUR_SLAB = new BlockVerticalSlab(Block.Properties.from(Blocks.PURPUR_SLAB)).setRegistryName(VerticalSlabsMod.location("vertical_purpur_slab")),
 
-                BlockList.VERTICAL_PRISMARINE_BRICK_SLAB = new BlockVerticalSlab(Block.Properties.from(Blocks.PRISMARINE_BRICK_SLAB)).setRegistryName(VerticalSlabsMod.location("vertical_prismarine_brick_slab")),
+                BlockList.VERTICAL_PRISMARINE_BRICKS_SLAB = new BlockVerticalSlab(Block.Properties.from(Blocks.PRISMARINE_BRICK_SLAB)).setRegistryName(VerticalSlabsMod.location("vertical_prismarine_bricks_slab")),
                 BlockList.VERTICAL_DARK_PRISMARINE_SLAB = new BlockVerticalSlab(Block.Properties.from(Blocks.DARK_PRISMARINE_SLAB)).setRegistryName(VerticalSlabsMod.location("vertical_dark_prismarine_slab")),
                 BlockList.VERTICAL_PRISMARINE_SLAB = new BlockVerticalSlab(Block.Properties.from(Blocks.PRISMARINE_SLAB)).setRegistryName(VerticalSlabsMod.location("vertical_prismarine_slab"))
             };
@@ -73,20 +73,20 @@ public class VerticalBlocks {
 
                 new ItemBlock(BlockList.VERTICAL_COBBLESTONE_SLAB, new Item.Properties().group(VerticalSlabsMod.GROUP).maxStackSize(64)),
                 new ItemBlock(BlockList.VERTICAL_ANDESITE_SLAB, new Item.Properties().group(VerticalSlabsMod.GROUP).maxStackSize(64)),
-                new ItemBlock(BlockList.VERTICAL_STONE_BRICK_SLAB, new Item.Properties().group(VerticalSlabsMod.GROUP).maxStackSize(64)),
+                new ItemBlock(BlockList.VERTICAL_STONE_BRICKS_SLAB, new Item.Properties().group(VerticalSlabsMod.GROUP).maxStackSize(64)),
                 new ItemBlock(BlockList.VERTICAL_SMOOTH_STONE_SLAB, new Item.Properties().group(VerticalSlabsMod.GROUP).maxStackSize(64)),
 
                 new ItemBlock(BlockList.VERTICAL_RED_SANDSTONE_SLAB, new Item.Properties().group(VerticalSlabsMod.GROUP).maxStackSize(64)),
                 new ItemBlock(BlockList.VERTICAL_SANDSTONE_SLAB, new Item.Properties().group(VerticalSlabsMod.GROUP).maxStackSize(64)),
 
-                new ItemBlock(BlockList.VERTICAL_BRICK_SLAB, new Item.Properties().group(VerticalSlabsMod.GROUP).maxStackSize(64)),
+                new ItemBlock(BlockList.VERTICAL_BRICKS_SLAB, new Item.Properties().group(VerticalSlabsMod.GROUP).maxStackSize(64)),
 
-                new ItemBlock(BlockList.VERTICAL_NETHER_BRICK_SLAB, new Item.Properties().group(VerticalSlabsMod.GROUP).maxStackSize(64)),
+                new ItemBlock(BlockList.VERTICAL_NETHER_BRICKS_SLAB, new Item.Properties().group(VerticalSlabsMod.GROUP).maxStackSize(64)),
                 new ItemBlock(BlockList.VERTICAL_QUARTZ_SLAB, new Item.Properties().group(VerticalSlabsMod.GROUP).maxStackSize(64)),
 
                 new ItemBlock(BlockList.VERTICAL_PURPUR_SLAB, new Item.Properties().group(VerticalSlabsMod.GROUP).maxStackSize(64)),
 
-                new ItemBlock(BlockList.VERTICAL_PRISMARINE_BRICK_SLAB, new Item.Properties().group(VerticalSlabsMod.GROUP).maxStackSize(64)),
+                new ItemBlock(BlockList.VERTICAL_PRISMARINE_BRICKS_SLAB, new Item.Properties().group(VerticalSlabsMod.GROUP).maxStackSize(64)),
                 new ItemBlock(BlockList.VERTICAL_DARK_PRISMARINE_SLAB, new Item.Properties().group(VerticalSlabsMod.GROUP).maxStackSize(64)),
                 new ItemBlock(BlockList.VERTICAL_PRISMARINE_SLAB, new Item.Properties().group(VerticalSlabsMod.GROUP).maxStackSize(64))
             };

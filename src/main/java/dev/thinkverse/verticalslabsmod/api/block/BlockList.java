@@ -57,29 +57,30 @@ public class BlockList {
     public static Block VERTICAL_OAK_SLAB = Null();
     public static Block VERTICAL_GRASS_SLAB = Null();
     public static Block VERTICAL_COBBLESTONE_SLAB= Null();
-    public static Block VERTICAL_STONE_BRICK_SLAB = Null();
+    public static Block VERTICAL_STONE_BRICKS_SLAB = Null();
     public static Block VERTICAL_SMOOTH_STONE_SLAB = Null();
     public static Block VERTICAL_RED_SANDSTONE_SLAB = Null();
     public static Block VERTICAL_SANDSTONE_SLAB = Null();
-    public static Block VERTICAL_BRICK_SLAB = Null();
-    public static Block VERTICAL_NETHER_BRICK_SLAB = Null();
+    public static Block VERTICAL_BRICKS_SLAB = Null();
+    public static Block VERTICAL_NETHER_BRICKS_SLAB = Null();
     public static Block VERTICAL_QUARTZ_SLAB = Null();
     public static Block VERTICAL_PURPUR_SLAB = Null();
-    public static Block VERTICAL_PRISMARINE_BRICK_SLAB = Null();
+    public static Block VERTICAL_PRISMARINE_BRICKS_SLAB = Null();
     public static Block VERTICAL_DARK_PRISMARINE_SLAB = Null();
     public static Block VERTICAL_PRISMARINE_SLAB = Null();
 
     /* Not Added yet */
-    public static Block VERTICAL_DIRT_SLAB = Null();
-    public static Block VERTICAL_STONE_SLAB = Null();
     public static Block VERTICAL_ANDESITE_SLAB = Null();
     public static Block VERTICAL_POLISHED_ANDESITE_SLAB = Null();
     public static Block VERTICAL_GRANITE_SLAB = Null();
     public static Block VERTICAL_POLISHED_GRANITE_SLAB = Null();
     public static Block VERTICAL_DIORITE_SLAB = Null();
     public static Block VERTICAL_POLISHED_DIORITE_SLAB = Null();
+    public static Block VERTICAL_DIRT_SLAB = Null();
+    public static Block VERTICAL_STONE_SLAB = Null();
     public static Block VERTICAL_MOSSY_COBBLESTONE_SLAB = Null();
     public static Block VERTICAL_MOSSY_STONE_BRICKS_SLAB = Null();
+
     public static Block VERTICAL_SMOOTH_SANDSTONE_SLAB = Null();
     public static Block VERTICAL_SMOOTH_RED_SANDSTONE_SLAB = Null();
     public static Block VERTICAL_SMOOTH_QUARTZ_SLAB = Null();
