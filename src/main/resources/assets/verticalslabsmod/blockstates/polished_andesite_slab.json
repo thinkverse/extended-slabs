@@ -1,0 +1,7 @@
+{ 
+  "variants": {
+    "type=bottom": { "model": "verticalslabsmod:block/slabs/regular/polished_andesite_slab" },
+    "type=top": { "model": "verticalslabsmod:block/slabs/regular/polished_andesite_slab_top" },
+    "type=double": { "model": "minecraft:block/polished_andesite" }
+  }
+}

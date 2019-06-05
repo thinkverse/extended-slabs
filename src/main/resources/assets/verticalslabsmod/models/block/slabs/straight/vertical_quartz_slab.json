@@ -1,7 +1,0 @@
-{ "parent": "verticalslabsmod:block/slabs/straight/vertical_slab",
-  "textures": {
-    "bottom": "minecraft:block/quartz_block_bottom",
-    "top": "minecraft:block/quartz_block_top",
-    "side": "minecraft:block/quartz_block_side"
-  }
-}

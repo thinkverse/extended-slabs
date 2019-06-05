@@ -1,0 +1,7 @@
+{ "parent": "verticalslabsmod:block/slabs/vertical/vertical_slab",
+  "textures": {
+    "bottom": "minecraft:block/stone_slab_top",
+    "top": "minecraft:block/stone_slab_top",
+    "side": "minecraft:block/stone_slab_side"
+  }
+}

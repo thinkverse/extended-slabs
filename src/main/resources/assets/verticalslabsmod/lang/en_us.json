@@ -3,6 +3,29 @@
   "language.region": "United States",
   "language.code": "en_us",
 
+  "itemGroup.verticalslabsmod": "Vertical Slabs Mod",
+
+  "block.minecraft.stone_slab": "Smooth Stone Slab", 
+
+  "block.verticalslabsmod.grass_stairs": "Grass Stairs",
+
+  "block.verticalslabsmod.polished_andesite_slab": "Polished Andesite Slab",
+  "block.verticalslabsmod.polished_diorite_slab": "Polished Diorite Slab",
+  "block.verticalslabsmod.polished_granite_slab": "Polished Granite Slab",
+  "block.verticalslabsmod.andesite_slab": "Andesite Slab",
+  "block.verticalslabsmod.diorite_slab": "Diorite Slab",
+  "block.verticalslabsmod.granite_slab": "Granite Slab",
+  "block.verticalslabsmod.mossy_cobblestone_slab": "Mossy Cobblestone Slab",
+  "block.verticalslabsmod.mossy_stone_bricks_slab": "Mossy Stone Bricks Slab",
+  "block.verticalslabsmod.cut_sandstone_slab": "Cut Sandstone Slab",
+  "block.verticalslabsmod.smooth_sandstone_slab": "Smooth Sandstone Slab",
+  "block.verticalslabsmod.cut_red_sandstone_slab": "Cut Red Sandstone Slab",
+  "block.verticalslabsmod.smooth_red_sandstone_slab": "Smooth Red Sandstone Slab",
+  "block.verticalslabsmod.smooth_quartz_slab": "Smooth Quartz",
+  "block.verticalslabsmod.red_nether_bricks_slab": "Red Nether Bricks Slab",
+  "block.verticalslabsmod.end_stone_bricks_slab": "Grass Slab",
+  "block.verticalslabsmod.grass_slab": "Grass Slab",
+
   "block.verticalslabsmod.vertical_dark_oak_slab": "Vertical Dark Oak Slab",
   "block.verticalslabsmod.vertical_spruce_slab": "Vertical Spruce Slab",
   "block.verticalslabsmod.vertical_acacia_slab": "Vertical Acacia Slab",
@@ -10,9 +33,11 @@
   "block.verticalslabsmod.vertical_birch_slab": "Vertical Birch Slab",
   "block.verticalslabsmod.vertical_oak_slab": "Vertical Oak Slab",
 
+  "block.verticalslabsmod.vertical_grass_slab": "Vertical Grass Slab",
+
   "block.verticalslabsmod.vertical_cobblestone_slab": "Vertical Cobblestone Slab",
   "block.verticalslabsmod.vertical_stone_brick_slab": "Vertical Stone Brick Slab",
-  "block.verticalslabsmod.vertical_stone_slab": "Vertical Stone Slab",
+  "block.verticalslabsmod.vertical_smooth_stone_slab": "Vertical Smooth Stone Slab",
 
   "block.verticalslabsmod.vertical_red_sandstone_slab": "Vertical Red Sandstone Slab",
   "block.verticalslabsmod.vertical_sandstone_slab": "Vertical Sandstone Slab",
@@ -26,7 +51,5 @@
 
   "block.verticalslabsmod.vertical_prismarine_brick_slab": "Vertical Prismarine Brick Slab",
   "block.verticalslabsmod.vertical_dark_prismarine_slab": "Vertical Dark Prismarine Slab",
-  "block.verticalslabsmod.vertical_prismarine_slab": "Vertical Prismarine Slab",
-
-  "itemGroup.verticalslabsmod": "Vertical Slabs Mod"
+  "block.verticalslabsmod.vertical_prismarine_slab": "Vertical Prismarine Slab"
 }

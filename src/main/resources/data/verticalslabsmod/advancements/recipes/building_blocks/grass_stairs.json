@@ -1,0 +1,30 @@
+{ 
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [ 
+      "verticalslabsmod:grass_stairs"
+    ]
+  },
+  "criteria": {
+    "has_stairs": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "item": "minecraft:grass_block" }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "verticalslabsmod:grass_stairs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_stairs",
+      "has_the_recipe"
+    ]
+  ]
+}

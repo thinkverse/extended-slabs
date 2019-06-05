@@ -1,0 +1,7 @@
+{ "parent": "verticalslabsmod:block/slabs/vertical/inner/inner_vertical_slab",
+  "textures": {
+    "bottom": "minecraft:block/dark_prismarine",
+    "top": "minecraft:block/dark_prismarine",
+    "side": "minecraft:block/dark_prismarine"
+  }
+}

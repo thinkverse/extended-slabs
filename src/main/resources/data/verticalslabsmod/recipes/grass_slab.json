@@ -1,0 +1,14 @@
+{ "type": "crafting_shaped",
+  "pattern": [
+    "GGG"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:grass_block"
+    }
+  },
+  "result": {
+    "item": "verticalslabsmod:grass_slab",
+    "count": 6
+  }
+}
