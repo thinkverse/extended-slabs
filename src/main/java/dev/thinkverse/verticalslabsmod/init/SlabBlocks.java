@@ -21,7 +21,7 @@ public class SlabBlocks {
     @Mod.EventBusSubscriber(modid = VerticalSlabsMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class Register {
         @SubscribeEvent
-        public static void RegisterBlocks(RegistryEvent.Register<Block> event) {
+        public static void RegisterSlabBlocks(RegistryEvent.Register<Block> event) {
             final Block[] blocks = {
                 BlockList.POLISHED_ANDESITE_SLAB = new BlockSlab(Block.Properties.from(Blocks.ANDESITE)).setRegistryName(VerticalSlabsMod.location("polished_andesite_slab")),
                 BlockList.POLISHED_DIORITE_SLAB = new BlockSlab(Block.Properties.from(Blocks.DIORITE)).setRegistryName(VerticalSlabsMod.location("polished_diorite_slab")),
@@ -56,7 +56,7 @@ public class SlabBlocks {
         }
 
         @SubscribeEvent
-        public static void RegisterItemBlocks(final RegistryEvent.Register<Item> event) {
+        public static void RegisterSlabItemBlocks(final RegistryEvent.Register<Item> event) {
             final ItemBlock[] items = {
                 new ItemBlock(BlockList.POLISHED_ANDESITE_SLAB, new Item.Properties().group(VerticalSlabsMod.GROUP).maxStackSize(64)),
                 new ItemBlock(BlockList.POLISHED_DIORITE_SLAB, new Item.Properties().group(VerticalSlabsMod.GROUP).maxStackSize(64)),
