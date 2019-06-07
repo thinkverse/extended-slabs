@@ -4,11 +4,11 @@
   ],
   "key": {
     "B": {
-      "item": "minecraft:grass_block"
+      "item": "minecraft:end_stone_bricks"
     }
   },
   "result": {
-    "item": "verticalslabsmod:grass_slab",
+    "item": "verticalslabsmod:end_stone_bricks_slab",
     "count": 6
   }
 }

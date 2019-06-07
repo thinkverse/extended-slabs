@@ -6,11 +6,11 @@
   ],
   "key": {
     "B": {
-      "item": "minecraft:grass_block"
+      "item": "minecraft:polished_granite"
     }
   },
   "result": {
-    "item": "verticalslabsmod:grass_stairs",
+    "item": "verticalslabsmod:polished_granite_stairs",
     "count": 4
   }
 }

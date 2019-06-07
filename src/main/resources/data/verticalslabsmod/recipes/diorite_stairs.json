@@ -6,11 +6,11 @@
   ],
   "key": {
     "B": {
-      "item": "minecraft:grass_block"
+      "item": "minecraft:diorite"
     }
   },
   "result": {
-    "item": "verticalslabsmod:grass_stairs",
+    "item": "verticalslabsmod:diorite_stairs",
     "count": 4
   }
 }

@@ -1,0 +1,30 @@
+{ 
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [ 
+      "verticalslabsmod:mossy_stone_bricks_stairs"
+    ]
+  },
+  "criteria": {
+    "has_stairs": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "item": "minecraft:mossy_stone_bricks" }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "verticalslabsmod:mossy_stone_bricks_stairs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_stairs",
+      "has_the_recipe"
+    ]
+  ]
+}

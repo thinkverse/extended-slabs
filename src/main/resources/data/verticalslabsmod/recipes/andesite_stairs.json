@@ -6,11 +6,11 @@
   ],
   "key": {
     "B": {
-      "item": "minecraft:grass_block"
+      "item": "minecraft:andesite"
     }
   },
   "result": {
-    "item": "verticalslabsmod:grass_stairs",
+    "item": "verticalslabsmod:andesite_stairs",
     "count": 4
   }
 }

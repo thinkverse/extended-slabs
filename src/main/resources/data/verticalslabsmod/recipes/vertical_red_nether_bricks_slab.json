@@ -1,0 +1,8 @@
+{ "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "verticalslabsmod:red_nether_bricks_slab" }
+  ],
+  "result": {
+    "item": "verticalslabsmod:vertical_red_nether_bricks_slab"
+  }
+}

@@ -6,11 +6,11 @@
   ],
   "key": {
     "B": {
-      "item": "minecraft:grass_block"
+      "item": "minecraft:mossy_stone_bricks"
     }
   },
   "result": {
-    "item": "verticalslabsmod:grass_stairs",
+    "item": "verticalslabsmod:mossy_stone_bricks_stairs",
     "count": 4
   }
 }

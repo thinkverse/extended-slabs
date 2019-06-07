@@ -49,24 +49,35 @@
   "block.verticalslabsmod.vertical_jungle_slab": "Vertical Jungle Slab",
   "block.verticalslabsmod.vertical_birch_slab": "Vertical Birch Slab",
   "block.verticalslabsmod.vertical_oak_slab": "Vertical Oak Slab",
-
   "block.verticalslabsmod.vertical_grass_slab": "Vertical Grass Slab",
-
   "block.verticalslabsmod.vertical_cobblestone_slab": "Vertical Cobblestone Slab",
   "block.verticalslabsmod.vertical_stone_bricks_slab": "Vertical Stone Bricks Slab",
   "block.verticalslabsmod.vertical_smooth_stone_slab": "Vertical Smooth Stone Slab",
-
   "block.verticalslabsmod.vertical_red_sandstone_slab": "Vertical Red Sandstone Slab",
   "block.verticalslabsmod.vertical_sandstone_slab": "Vertical Sandstone Slab",
-
   "block.verticalslabsmod.vertical_bricks_slab": "Vertical Bricks Slab",
-
   "block.verticalslabsmod.vertical_nether_bricks_slab": "Vertical Nether Bricks Slab",
   "block.verticalslabsmod.vertical_quartz_slab": "Vertical Quartz Slab",
-
   "block.verticalslabsmod.vertical_purpur_slab": "Vertical Purpur Slab",
-
   "block.verticalslabsmod.vertical_prismarine_bricks_slab": "Vertical Prismarine Bricks Slab",
   "block.verticalslabsmod.vertical_dark_prismarine_slab": "Vertical Dark Prismarine Slab",
-  "block.verticalslabsmod.vertical_prismarine_slab": "Vertical Prismarine Slab"
+  "block.verticalslabsmod.vertical_prismarine_slab": "Vertical Prismarine Slab",
+
+  "block.verticalslabsmod.vertical_polished_andesite_slab": "Vertical Polished Andesite Slab",
+  "block.verticalslabsmod.vertical_polished_diorite_slab": "Vertical Polished Diorite Slab",
+  "block.verticalslabsmod.vertical_polished_granite_slab": "Vertical Polished Granite Slab",
+  "block.verticalslabsmod.vertical_andesite_slab": "Vertical Andesite Slab",
+  "block.verticalslabsmod.vertical_diorite_slab": "Vertical Diorite Slab",
+  "block.verticalslabsmod.vertical_granite_slab": "Vertical Granite Slab",
+  "block.verticalslabsmod.vertical_mossy_cobblestone_slab": "Vertical Mossy Cobblestone Slab",
+  "block.verticalslabsmod.vertical_mossy_stone_bricks_slab": "Vertical Mossy Stone Bricks Slab",
+  "block.verticalslabsmod.vertical_cut_sandstone_slab": "Vertical Cut Sandstone Slab",
+  "block.verticalslabsmod.vertical_smooth_sandstone_slab": "Vertical Smooth Sandstone Slab",
+  "block.verticalslabsmod.vertical_cut_red_sandstone_slab": "Vertical Cut Red Sandstone Slab",
+  "block.verticalslabsmod.vertical_smooth_red_sandstone_slab": "Vertical Smooth Red Sandstone Slab",
+  "block.verticalslabsmod.vertical_smooth_quartz_slab": "Vertical Smooth Quartz Slab",
+  "block.verticalslabsmod.vertical_red_nether_bricks_slab": "Vertical Red Nether Bricks Slab",
+  "block.verticalslabsmod.vertical_end_stone_bricks_slab": "Vertical End Stone Bricks Slab",
+  "block.verticalslabsmod.vertical_stone_slab": "Vertical Stone Slab",
+  "block.verticalslabsmod.vertical_dirt_slab": "Vertical Dirt Slab"
 }

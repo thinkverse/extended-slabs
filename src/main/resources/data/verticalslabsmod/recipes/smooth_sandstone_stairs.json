@@ -6,11 +6,11 @@
   ],
   "key": {
     "B": {
-      "item": "minecraft:grass_block"
+      "item": "minecraft:smooth_sandstone"
     }
   },
   "result": {
-    "item": "verticalslabsmod:grass_stairs",
+    "item": "verticalslabsmod:smooth_sandstone_stairs",
     "count": 4
   }
 }

@@ -1,0 +1,30 @@
+{ 
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [ 
+      "verticalslabsmod:stone_slab"
+    ]
+  },
+  "criteria": {
+    "has_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "item": "minecraft:stone" }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "verticalslabsmod:stone_slab"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_slab",
+      "has_the_recipe"
+    ]
+  ]
+}

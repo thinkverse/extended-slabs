@@ -4,11 +4,11 @@
   ],
   "key": {
     "B": {
-      "item": "minecraft:grass_block"
+      "item": "minecraft:dirt"
     }
   },
   "result": {
-    "item": "verticalslabsmod:grass_slab",
+    "item": "verticalslabsmod:dirt_slab",
     "count": 6
   }
 }
