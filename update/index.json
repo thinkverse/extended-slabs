@@ -1,10 +1,10 @@
 {
   "homepage": "https://minecraft.curseforge.com/projects/extended-slabs",
   "promos": {
-    "1.13.2-latest": "0.4.0-beta",
-    "1.13.2-recommended": "0.4.0-beta"
+    "1.13.2-latest": "0.5.0-beta",
+    "1.13.2-recommended": "0.5.0-beta"
   },
   "1.13.2": {
-    "0.4.0-beta": "beta release, bunch blocks added"
+    "0.5.0-beta": "breaking! modid change"
   }
 }
