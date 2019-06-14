@@ -1,20 +1,18 @@
 modLoader="javafml"
 loaderVersion="[25,)"
-issueTrackerURL="https://github.com/thinkverse/vertical_slabs/issues"
+issueTrackerURL="https://github.com/thinkverse/Extended-Slabs/issues"
 
 [[mods]]
-    modId="verticalslabsmod"
+    modId="extendedslabs"
     version="${file.jarVersion}"
-    displayName="Vertical Slabs Mod"
+    displayName="Extended Slabs"
     displayURL="https://thinkverse.dev"
-    updateJSONURL="https://thinkverse.dev/vertical_slabs/update"
+    updateJSONURL="https://thinkverse.dev/Extended-Slabs/update"
     logoFile="examplemod.png"
-    credits="Clownvin, HarryTechRevs & SilentChaos512"
+    credits="Clownvin, HarryTechRevs, SilentChaos512 & Champion Ash5357"
     authors="Thinkverse"
     description='''
-    This mod adds vertical slabs to minecraft.
-
-    Have fun!
+    This mod adds vertical slabs and more to Minecraft.
     '''
 
 [[dependencies.versecraft]]

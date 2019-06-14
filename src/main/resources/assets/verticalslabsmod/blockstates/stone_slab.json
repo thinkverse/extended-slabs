@@ -1,7 +1,0 @@
-{ 
-  "variants": {
-    "type=bottom": { "model": "verticalslabsmod:block/slabs/regular/stone_slab" },
-    "type=top": { "model": "verticalslabsmod:block/slabs/regular/stone_slab_top" },
-    "type=double": { "model": "minecraft:block/stone" }
-  }
-}

@@ -1,0 +1,14 @@
+{ "type": "crafting_shaped",
+  "pattern": [
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:polished_andesite"
+    }
+  },
+  "result": {
+    "item": "extendedslabs:polished_andesite_slab",
+    "count": 6
+  }
+}

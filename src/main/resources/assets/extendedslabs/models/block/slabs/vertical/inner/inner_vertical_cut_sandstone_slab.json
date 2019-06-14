@@ -1,0 +1,7 @@
+{ "parent": "extendedslabs:block/slabs/vertical/inner/inner_vertical_slab",
+  "textures": {
+    "bottom": "minecraft:block/cut_sandstone",
+    "top": "minecraft:block/cut_sandstone",
+    "side": "minecraft:block/cut_sandstone"
+  }
+}

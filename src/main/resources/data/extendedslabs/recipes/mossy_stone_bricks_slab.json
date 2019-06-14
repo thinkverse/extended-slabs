@@ -1,0 +1,14 @@
+{ "type": "crafting_shaped",
+  "pattern": [
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:mossy_stone_bricks"
+    }
+  },
+  "result": {
+    "item": "extendedslabs:mossy_stone_bricks_slab",
+    "count": 6
+  }
+}

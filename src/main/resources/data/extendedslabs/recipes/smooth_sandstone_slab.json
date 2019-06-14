@@ -1,0 +1,14 @@
+{ "type": "crafting_shaped",
+  "pattern": [
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:smooth_sandstone"
+    }
+  },
+  "result": {
+    "item": "extendedslabs:smooth_sandstone_slab",
+    "count": 6
+  }
+}

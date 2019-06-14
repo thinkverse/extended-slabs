@@ -1,0 +1,16 @@
+{ "type": "crafting_shaped",
+  "pattern": [
+    "B  ",
+    "BB ",
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:dirt"
+    }
+  },
+  "result": {
+    "item": "extendedslabs:dirt_stairs",
+    "count": 4
+  }
+}

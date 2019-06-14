@@ -1,8 +1,0 @@
-{ "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    { "item": "verticalslabsmod:grass_slab" }
-  ],
-  "result": {
-    "item": "verticalslabsmod:vertical_grass_slab"
-  }
-}

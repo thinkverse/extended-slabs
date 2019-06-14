@@ -1,8 +1,0 @@
-{ "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    { "item": "verticalslabsmod:stone_slab" }
-  ],
-  "result": {
-    "item": "verticalslabsmod:vertical_stone_slab"
-  }
-}

@@ -1,0 +1,7 @@
+{ "parent": "extendedslabs:block/slabs/vertical/outer/outer_vertical_slab",
+  "textures": {
+    "bottom": "minecraft:block/prismarine",
+    "top": "minecraft:block/prismarine",
+    "side": "minecraft:block/prismarine"
+  }
+}

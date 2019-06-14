@@ -1,7 +1,0 @@
-{ "parent": "verticalslabsmod:block/slabs/vertical/vertical_slab",
-  "textures": {
-    "bottom": "minecraft:block/polished_diorite",
-    "top": "minecraft:block/polished_diorite",
-    "side": "minecraft:block/polished_diorite"
-  }
-}
