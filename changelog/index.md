@@ -2,6 +2,9 @@
 
 #### BETA
 
+**0.5.0**
+breaking change: modid change
+
 **0.4.0**
 
 update: grass, dirt and 1.14 variants added
