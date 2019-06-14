@@ -6,9 +6,9 @@ import dev.thinkverse.extendedslabs.blocks.BlockVerticalSlab;
 import dev.thinkverse.extendedslabs.blocks.grass.BlockVerticalGrassSlab;
 import dev.thinkverse.extendedslabs.core.ExtendedSlabs;
 import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
+import net.minecraft.block.Blocks;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -78,54 +78,54 @@ public class VerticalBlocks {
 
         @SubscribeEvent
         public static void RegisterVerticalItemBlocks(final RegistryEvent.Register<Item> event) {
-            final ItemBlock[] items = {
-                new ItemBlock(BlockList.VERTICAL_DARK_OAK_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
-                new ItemBlock(BlockList.VERTICAL_SPRUCE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
-                new ItemBlock(BlockList.VERTICAL_ACACIA_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
-                new ItemBlock(BlockList.VERTICAL_JUNGLE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
-                new ItemBlock(BlockList.VERTICAL_BIRCH_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
-                new ItemBlock(BlockList.VERTICAL_OAK_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+            final BlockItem[] items = {
+                new BlockItem(BlockList.VERTICAL_DARK_OAK_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_SPRUCE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_ACACIA_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_JUNGLE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_BIRCH_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_OAK_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
 
-                new ItemBlock(BlockList.VERTICAL_GRASS_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_GRASS_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
 
-                new ItemBlock(BlockList.VERTICAL_COBBLESTONE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
-                new ItemBlock(BlockList.VERTICAL_STONE_BRICKS_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
-                new ItemBlock(BlockList.VERTICAL_SMOOTH_STONE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_COBBLESTONE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_STONE_BRICKS_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_SMOOTH_STONE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
 
-                new ItemBlock(BlockList.VERTICAL_RED_SANDSTONE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
-                new ItemBlock(BlockList.VERTICAL_SANDSTONE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_RED_SANDSTONE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_SANDSTONE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
 
-                new ItemBlock(BlockList.VERTICAL_BRICKS_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_BRICKS_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
 
-                new ItemBlock(BlockList.VERTICAL_NETHER_BRICKS_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
-                new ItemBlock(BlockList.VERTICAL_QUARTZ_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_NETHER_BRICKS_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_QUARTZ_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
 
-                new ItemBlock(BlockList.VERTICAL_PURPUR_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_PURPUR_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
 
-                new ItemBlock(BlockList.VERTICAL_PRISMARINE_BRICKS_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
-                new ItemBlock(BlockList.VERTICAL_DARK_PRISMARINE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
-                new ItemBlock(BlockList.VERTICAL_PRISMARINE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_PRISMARINE_BRICKS_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_DARK_PRISMARINE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_PRISMARINE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
 
-                new ItemBlock(BlockList.VERTICAL_ANDESITE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
-                new ItemBlock(BlockList.VERTICAL_POLISHED_ANDESITE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
-                new ItemBlock(BlockList.VERTICAL_GRANITE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
-                new ItemBlock(BlockList.VERTICAL_POLISHED_GRANITE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
-                new ItemBlock(BlockList.VERTICAL_DIORITE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
-                new ItemBlock(BlockList.VERTICAL_POLISHED_DIORITE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
-                new ItemBlock(BlockList.VERTICAL_DIRT_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
-                new ItemBlock(BlockList.VERTICAL_STONE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
-                new ItemBlock(BlockList.VERTICAL_MOSSY_COBBLESTONE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
-                new ItemBlock(BlockList.VERTICAL_MOSSY_STONE_BRICKS_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
-                new ItemBlock(BlockList.VERTICAL_SMOOTH_SANDSTONE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
-                new ItemBlock(BlockList.VERTICAL_SMOOTH_RED_SANDSTONE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
-                new ItemBlock(BlockList.VERTICAL_SMOOTH_QUARTZ_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
-                new ItemBlock(BlockList.VERTICAL_RED_NETHER_BRICKS_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
-                new ItemBlock(BlockList.VERTICAL_END_STONE_BRICKS_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
-                new ItemBlock(BlockList.VERTICAL_CUT_SANDSTONE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
-                new ItemBlock(BlockList.VERTICAL_CUT_RED_SANDSTONE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64))
+                new BlockItem(BlockList.VERTICAL_ANDESITE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_POLISHED_ANDESITE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_GRANITE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_POLISHED_GRANITE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_DIORITE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_POLISHED_DIORITE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_DIRT_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_STONE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_MOSSY_COBBLESTONE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_MOSSY_STONE_BRICKS_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_SMOOTH_SANDSTONE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_SMOOTH_RED_SANDSTONE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_SMOOTH_QUARTZ_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_RED_NETHER_BRICKS_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_END_STONE_BRICKS_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_CUT_SANDSTONE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64)),
+                new BlockItem(BlockList.VERTICAL_CUT_RED_SANDSTONE_SLAB, new Item.Properties().group(ExtendedSlabs.GROUP).maxStackSize(64))
             };
 
-            for (final ItemBlock item: items) {
+            for (final BlockItem item: items) {
                 final Block block = item.getBlock();
                 final ResourceLocation registryname = Preconditions.checkNotNull(block.getRegistryName(), "BlockItem: %s has a NULL registry name", block);
 

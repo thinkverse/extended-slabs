@@ -10,7 +10,7 @@
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
-          { "item": "extendedslabs:diorite_slab" }
+          { "item": "minecraft:diorite_slab" }
         ]
       }
     },

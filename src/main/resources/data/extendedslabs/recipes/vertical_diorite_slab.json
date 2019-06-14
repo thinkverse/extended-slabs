@@ -1,7 +1,6 @@
 { "type": "minecraft:crafting_shapeless",
-  "group": "wooden_vertical_slab",
   "ingredients": [
-    { "item": "extendedslabs:diorite_slab" }
+    { "item": "minecraft:diorite_slab" }
   ],
   "result": {
     "item": "extendedslabs:vertical_diorite_slab"

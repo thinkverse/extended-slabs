@@ -10,7 +10,7 @@
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
-          { "item": "extendedslabs:andesite_slab" }
+          { "item": "minecraft:andesite_slab" }
         ]
       }
     },

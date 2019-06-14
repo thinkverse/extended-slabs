@@ -10,7 +10,7 @@
       "conditions": {
         "items": [
           {
-            "item": "extendedslabs:red_nether_bricks_slab"
+            "item": "minecraft:red_nether_brick_slab"
           }
         ]
       }

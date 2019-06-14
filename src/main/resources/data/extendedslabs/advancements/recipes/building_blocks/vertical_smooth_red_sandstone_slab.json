@@ -10,7 +10,7 @@
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
-          { "item": "extendedslabs:smooth_red_sandstone_slab" }
+          { "item": "minecraft:smooth_red_sandstone_slab" }
         ]
       }
     },

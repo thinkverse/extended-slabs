@@ -1,11 +1,11 @@
 package dev.thinkverse.extendedslabs.core;
 
 import dev.thinkverse.extendedslabs.api.block.BlockList;
-import net.minecraft.block.state.IBlockState;
+import net.minecraft.block.BlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.color.BlockColors;
 import net.minecraft.client.renderer.color.ItemColors;
-import net.minecraft.item.ItemBlock;
+import net.minecraft.item.BlockItem;
 import net.minecraft.world.GrassColors;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeColors;
@@ -23,8 +23,8 @@ public class ClientProxy extends CommonProxy {
                 BlockList.GRASS_SLAB, BlockList.VERTICAL_GRASS_SLAB, BlockList.GRASS_STAIRS);
 
         itemcolors.register((stack, tintindex) -> {
-                    IBlockState iblockstate = ((ItemBlock)stack.getItem()).getBlock().getDefaultState();
-                    return blockcolors.getColor(iblockstate, null, null, tintindex); },
+                    BlockState iblockstate = ((BlockItem)stack.getItem()).getBlock().getDefaultState();
+                    return blockcolors.getColor(iblockstate, null, null); },
                 BlockList.GRASS_SLAB, BlockList.VERTICAL_GRASS_SLAB, BlockList.GRASS_STAIRS);
     }
 

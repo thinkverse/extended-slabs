@@ -10,7 +10,7 @@
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
-          { "item": "extendedslabs:smooth_quartz_slab" }
+          { "item": "minecraft:smooth_quartz_slab" }
         ]
       }
     },

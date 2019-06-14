@@ -1,23 +1,21 @@
 package dev.thinkverse.extendedslabs.blocks;
 
 import dev.thinkverse.extendedslabs.blocks.shapes.VerticalSlabShape;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockHorizontal;
-import net.minecraft.block.IBucketPickupHandler;
-import net.minecraft.block.ILiquidContainer;
-import net.minecraft.block.state.BlockFaceShape;
-import net.minecraft.block.state.IBlockState;
+import net.minecraft.block.*;
 import net.minecraft.fluid.Fluid;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.fluid.IFluidState;
-import net.minecraft.init.Fluids;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.EnumProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.util.EnumFacing;
+import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.Direction;
+import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
@@ -26,7 +24,7 @@ import net.minecraft.world.IWorld;
 import javax.annotation.Nullable;
 
 public class BlockVerticalSlab extends Block implements IBucketPickupHandler, ILiquidContainer {
-    public static final DirectionProperty FACING = BlockHorizontal.HORIZONTAL_FACING;
+    public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final EnumProperty<VerticalSlabShape> SHAPE = EnumProperty.create("shape", VerticalSlabShape.class);
 
@@ -42,45 +40,48 @@ public class BlockVerticalSlab extends Block implements IBucketPickupHandler, IL
 
     public BlockVerticalSlab(Block.Properties builder) {
         super(builder);
-        this.setDefaultState(this.stateContainer.getBaseState().with(FACING, EnumFacing.NORTH).with(SHAPE, VerticalSlabShape.STRAIGHT).with(WATERLOGGED, Boolean.valueOf(false)));
+        this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH).with(SHAPE, VerticalSlabShape.STRAIGHT).with(WATERLOGGED, Boolean.valueOf(false)));
     }
 
     @Override
-    protected void fillStateContainer(StateContainer.Builder<Block, IBlockState> builder) {
+    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
         builder.add(FACING, SHAPE, WATERLOGGED);
     }
 
     @Override
     @SuppressWarnings("deprecation")
-    public boolean isFullCube(IBlockState state) {
+    public boolean func_220074_n(BlockState state) {
         return false;
     }
 
     @Override
-    @SuppressWarnings("deprecation")
-    public BlockFaceShape getBlockFaceShape(IBlockReader worldIn, IBlockState state, BlockPos pos, EnumFacing face) {
+    public BlockRenderLayer getRenderLayer() {
+        return super.getRenderLayer();
+    }
+
+    public BlockRenderLayer getRenderLayer(IBlockReader worldIn, BlockState state, BlockPos pos, Direction face) {
         VerticalSlabShape verticalslabshape = state.get(SHAPE);
         if (verticalslabshape != VerticalSlabShape.OUTER_LEFT && verticalslabshape != VerticalSlabShape.OUTER_RIGHT) {
-            EnumFacing enumfacing = state.get(FACING);
+            Direction enumfacing = state.get(FACING);
             switch(verticalslabshape) {
                 case STRAIGHT:
-                    return enumfacing == face ? BlockFaceShape.SOLID : BlockFaceShape.UNDEFINED;
+                    return enumfacing == face ? BlockRenderLayer.SOLID : BlockRenderLayer.TRANSLUCENT;
                 case INNER_LEFT:
                 case INNER_RIGHT:
-                    return enumfacing != face ? BlockFaceShape.UNDEFINED : BlockFaceShape.SOLID;
+                    return enumfacing != face ? BlockRenderLayer.TRANSLUCENT : BlockRenderLayer.SOLID;
                 default:
-                    return BlockFaceShape.UNDEFINED;
+                    return BlockRenderLayer.TRANSLUCENT;
             }
         } else {
-            return BlockFaceShape.UNDEFINED;
+            return BlockRenderLayer.TRANSLUCENT;
         }
     }
 
     @Override
     @SuppressWarnings("deprecation")
-    public VoxelShape getShape(IBlockState state, IBlockReader worldIn, BlockPos pos) {
+    public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
         VerticalSlabShape verticalslabshape = state.get(SHAPE);
-        EnumFacing enumfacing = state.get(FACING);
+        Direction enumfacing = state.get(FACING);
 
         if (verticalslabshape != VerticalSlabShape.STRAIGHT) {
             switch(verticalslabshape) {
@@ -100,7 +101,7 @@ public class BlockVerticalSlab extends Block implements IBucketPickupHandler, IL
         }
     }
 
-    private static VoxelShape getStraightFacingShapes(EnumFacing facing) {
+    private static VoxelShape getStraightFacingShapes(Direction facing) {
         switch (facing) {
             case WEST:
                 return (VoxelShape) WEST_SHAPE;
@@ -113,7 +114,7 @@ public class BlockVerticalSlab extends Block implements IBucketPickupHandler, IL
         }
     }
 
-    private static VoxelShape getOuterLeftFacingShapes(EnumFacing facing) {
+    private static VoxelShape getOuterLeftFacingShapes(Direction facing) {
         switch (facing) {
             case WEST:
                 return (VoxelShape) WEST_OUTER_SHAPE;
@@ -126,7 +127,7 @@ public class BlockVerticalSlab extends Block implements IBucketPickupHandler, IL
         }
     }
 
-    private static VoxelShape getInnerLeftFacingShapes(EnumFacing facing) {
+    private static VoxelShape getInnerLeftFacingShapes(Direction facing) {
         switch (facing) {
             case WEST:
                 return (VoxelShape) VoxelShapes.or(WEST_SHAPE, SOUTH_SHAPE);
@@ -139,7 +140,7 @@ public class BlockVerticalSlab extends Block implements IBucketPickupHandler, IL
         }
     }
 
-    private static VoxelShape getOuterRightFacingShapes(EnumFacing facing) {
+    private static VoxelShape getOuterRightFacingShapes(Direction facing) {
         switch (facing) {
             case WEST:
                 return (VoxelShape) NORTH_OUTER_SHAPE;
@@ -152,7 +153,7 @@ public class BlockVerticalSlab extends Block implements IBucketPickupHandler, IL
         }
     }
 
-    private static VoxelShape getInnerRightFacingShapes(EnumFacing facing) {
+    private static VoxelShape getInnerRightFacingShapes(Direction facing) {
         switch (facing) {
             case WEST:
                 return (VoxelShape) VoxelShapes.or(WEST_SHAPE, NORTH_SHAPE);
@@ -167,18 +168,18 @@ public class BlockVerticalSlab extends Block implements IBucketPickupHandler, IL
 
     @Nullable
     @Override
-    public IBlockState getStateForPlacement(BlockItemUseContext context) {
-        EnumFacing enumfacing = context.getFace();
+    public BlockState getStateForPlacement(BlockItemUseContext context) {
+        Direction enumfacing = context.getFace();
         IFluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
-        IBlockState iblockstate = this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing()).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
+        BlockState iblockstate = this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing()).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
         return iblockstate.with(SHAPE, getSlabShape(iblockstate, context.getWorld(), context.getPos()));
     }
 
-    private static VerticalSlabShape getSlabShape(IBlockState state, IBlockReader worldIn, BlockPos pos) {
-        EnumFacing enumfacing = state.get(FACING);
-        IBlockState iblockstate = worldIn.getBlockState(pos.offset(enumfacing));
+    private static VerticalSlabShape getSlabShape(BlockState state, IBlockReader worldIn, BlockPos pos) {
+        Direction enumfacing = state.get(FACING);
+        BlockState iblockstate = worldIn.getBlockState(pos.offset(enumfacing));
         if (isBlockVerticalSlab(iblockstate)) {
-            EnumFacing enumfacing1 = iblockstate.get(FACING);
+            Direction enumfacing1 = iblockstate.get(FACING);
             if (enumfacing1.getAxis() != state.get(FACING).getAxis() && isDifferentVerticalSlab(state, worldIn, pos, enumfacing1.getOpposite())) {
                 if (enumfacing1 == enumfacing.rotateYCCW()) {
                     return VerticalSlabShape.OUTER_LEFT;
@@ -188,9 +189,9 @@ public class BlockVerticalSlab extends Block implements IBucketPickupHandler, IL
             }
         }
 
-        IBlockState iblockstate1 = worldIn.getBlockState(pos.offset(enumfacing.getOpposite()));
+        BlockState iblockstate1 = worldIn.getBlockState(pos.offset(enumfacing.getOpposite()));
         if (isBlockVerticalSlab(iblockstate1)) {
-            EnumFacing enumfacing2 = iblockstate1.get(FACING);
+            Direction enumfacing2 = iblockstate1.get(FACING);
             if (enumfacing2.getAxis() != state.get(FACING).getAxis() && isDifferentVerticalSlab(state, worldIn, pos, enumfacing2)) {
                 if (enumfacing2 == enumfacing.rotateYCCW()) {
                     return VerticalSlabShape.INNER_LEFT;
@@ -203,18 +204,18 @@ public class BlockVerticalSlab extends Block implements IBucketPickupHandler, IL
         return VerticalSlabShape.STRAIGHT;
     }
 
-    private static boolean isDifferentVerticalSlab(IBlockState state, IBlockReader worldIn, BlockPos pos, EnumFacing enumFacing) {
-        IBlockState iblockstate = worldIn.getBlockState(pos.offset(enumFacing));
+    private static boolean isDifferentVerticalSlab(BlockState state, IBlockReader worldIn, BlockPos pos, Direction enumFacing) {
+        BlockState iblockstate = worldIn.getBlockState(pos.offset(enumFacing));
         return !isBlockVerticalSlab(iblockstate) || iblockstate.get(FACING) != state.get(FACING);
     }
 
-    public static boolean isBlockVerticalSlab(IBlockState state) {
+    public static boolean isBlockVerticalSlab(BlockState state) {
         return state.getBlock() instanceof BlockVerticalSlab;
     }
 
     @Override
     @SuppressWarnings("deprecation")
-    public IBlockState updatePostPlacement(IBlockState stateIn, EnumFacing facing, IBlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos) {
+    public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos) {
         if (stateIn.get(WATERLOGGED)) {
             worldIn.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));
         }
@@ -223,7 +224,7 @@ public class BlockVerticalSlab extends Block implements IBucketPickupHandler, IL
     }
 
     @Override
-    public Fluid pickupFluid(IWorld worldIn, BlockPos pos, IBlockState state) {
+    public Fluid pickupFluid(IWorld worldIn, BlockPos pos, BlockState state) {
         if (state.get(WATERLOGGED)) {
             worldIn.setBlockState(pos, state.with(WATERLOGGED, Boolean.valueOf(false)), 3);
             return Fluids.WATER;
@@ -234,17 +235,17 @@ public class BlockVerticalSlab extends Block implements IBucketPickupHandler, IL
 
     @Override
     @SuppressWarnings("deprecation")
-    public IFluidState getFluidState(IBlockState state) {
+    public IFluidState getFluidState(BlockState state) {
         return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
     }
 
     @Override
-    public boolean canContainFluid(IBlockReader worldIn, BlockPos pos, IBlockState state, Fluid fluidIn) {
+    public boolean canContainFluid(IBlockReader worldIn, BlockPos pos, BlockState state, Fluid fluidIn) {
         return !state.get(WATERLOGGED) && fluidIn == Fluids.WATER;
     }
 
     @Override
-    public boolean receiveFluid(IWorld worldIn, BlockPos pos, IBlockState state, IFluidState fluidStateIn) {
+    public boolean receiveFluid(IWorld worldIn, BlockPos pos, BlockState state, IFluidState fluidStateIn) {
         if (!state.get(WATERLOGGED) && fluidStateIn.getFluid() == Fluids.WATER) {
             if (!worldIn.isRemote()) {
                 worldIn.setBlockState(pos, state.with(WATERLOGGED, Boolean.valueOf(true)), 3);

@@ -10,7 +10,7 @@
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
-          { "item": "extendedslabs:polished_granite_slab" }
+          { "item": "minecraft:polished_granite_slab" }
         ]
       }
     },

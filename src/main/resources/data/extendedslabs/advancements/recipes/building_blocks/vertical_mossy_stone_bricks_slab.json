@@ -10,7 +10,7 @@
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
-          { "item": "extendedslabs:mossy_stone_bricks_slab" }
+          { "item": "minecraft:mossy_stone_brick_slab" }
         ]
       }
     },

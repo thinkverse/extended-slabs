@@ -10,7 +10,7 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:stone_slab"
+            "item": "minecraft:smooth_stone_slab"
           }
         ]
       }

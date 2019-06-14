@@ -1,15 +1,15 @@
 package dev.thinkverse.extendedslabs.blocks.grass;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockStairs;
-import net.minecraft.block.state.IBlockState;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.StairsBlock;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraftforge.common.ToolType;
 
 import javax.annotation.Nullable;
 
-public class BlockGrassStairs extends BlockStairs {
-    public BlockGrassStairs(IBlockState state, Block.Properties builder) {
+public class BlockGrassStairs extends StairsBlock {
+    public BlockGrassStairs(BlockState state, Block.Properties builder) {
         super(state, builder);
     }
 
@@ -20,7 +20,7 @@ public class BlockGrassStairs extends BlockStairs {
 
     @Nullable
     @Override
-    public ToolType getHarvestTool(IBlockState state) {
+    public ToolType getHarvestTool(BlockState state) {
         return ToolType.SHOVEL;
     }
 }

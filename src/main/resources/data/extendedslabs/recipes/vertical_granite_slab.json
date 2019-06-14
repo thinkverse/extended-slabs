@@ -1,7 +1,6 @@
 { "type": "minecraft:crafting_shapeless",
-  "group": "wooden_vertical_slab",
   "ingredients": [
-    { "item": "extendedslabs:granite_slab" }
+    { "item": "minecraft:granite_slab" }
   ],
   "result": {
     "item": "extendedslabs:vertical_granite_slab"
