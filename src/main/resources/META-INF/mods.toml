@@ -1,13 +1,13 @@
 modLoader="javafml"
 loaderVersion="[25,)"
-issueTrackerURL="https://github.com/thinkverse/Extended-Slabs/issues"
+issueTrackerURL="https://github.com/thinkverse/extended-slabs/issues"
 
 [[mods]]
     modId="extendedslabs"
     version="${file.jarVersion}"
     displayName="Extended Slabs"
     displayURL="https://thinkverse.dev"
-    updateJSONURL="https://thinkverse.dev/Extended-Slabs/update"
+    updateJSONURL="https://thinkverse.dev/extended-slabs/update"
     logoFile="examplemod.png"
     credits="Clownvin, HarryTechRevs, SilentChaos512 & Champion Ash5357"
     authors="Thinkverse"
