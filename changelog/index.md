@@ -2,6 +2,9 @@
 
 #### BETA
 
+**0.5.1**
+fix: update checker
+
 **0.5.0**
 breaking change: modid change
 
