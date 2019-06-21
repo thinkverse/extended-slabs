@@ -2,10 +2,18 @@
 
 #### BETA
 
+**0.6.0**
+
+update: refactored blocks to use enums, should fix Null pointers
+
+fix(lang): item group now display correct mod name 
+
 **0.5.1**
+
 fix: update checker
 
 **0.5.0**
+
 breaking change: modid change
 
 **0.4.0**
