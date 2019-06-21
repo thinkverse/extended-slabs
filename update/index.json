@@ -1,13 +1,14 @@
 {
   "homepage": "https://minecraft.curseforge.com/projects/extended-slabs",
   "promos": {
-    "1.13.2-latest": "0.5.1-beta",
+    "1.13.2-latest": "0.6.0-beta",
     "1.14.2-latest": "0.2.0-alpha",
-    "1.13.2-recommended": "0.5.1-beta",
+    "1.13.2-recommended": "0.6.0-beta",
     "1.14.2-recommended": "0.2.0-alpha"
   },
   "1.13.2": {
-    "0.5.1-beta": "fix: update checker url"
+    "0.6.0-beta": "update: refactored blocks to use enums, should fix Null pointers, 
+    fix(lang): item group now display correct mod name"
   },
   "1.14.2": {
     "0.2.0-alpha": "forge update"
