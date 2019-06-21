@@ -19,7 +19,7 @@ import java.util.Random;
 public class ExtendedSlabs
 {
     public static final String MODID = "extendedslabs";
-    public static final String VERSION = "0.5.1-beta";
+    public static final String VERSION = "0.6.0-beta";
 
     public static ExtendedSlabs INSTANCE;
 
