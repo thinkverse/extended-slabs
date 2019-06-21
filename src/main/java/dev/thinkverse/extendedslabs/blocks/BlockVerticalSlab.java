@@ -219,7 +219,8 @@ public class BlockVerticalSlab extends Block implements IBucketPickupHandler, IL
             worldIn.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));
         }
 
-        return super.updatePostPlacement(stateIn, facing, facingState, worldIn, currentPos, facingPos);
+        /* First round of updatePostPlacement */
+        return facing.getAxis().isHorizontal() ? stateIn.with(SHAPE, getSlabShape(stateIn, worldIn, currentPos)) : super.updatePostPlacement(stateIn, facing, facingState, worldIn, currentPos, facingPos);
     }
 
     @Override

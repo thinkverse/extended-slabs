@@ -1,6 +1,6 @@
 package dev.thinkverse.extendedslabs.core;
 
-import dev.thinkverse.extendedslabs.api.block.BlockList;
+import dev.thinkverse.extendedslabs.init.ModBlocks;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.color.BlockColors;
@@ -20,12 +20,12 @@ public class ClientProxy extends CommonProxy {
 
         blockcolors.register((state, world, pos, tintindex) ->
                         world != null && pos != null ? BiomeColors.getGrassColor(world, pos) : GrassColors.get(0.5D, 1.0D),
-                BlockList.GRASS_SLAB, BlockList.VERTICAL_GRASS_SLAB, BlockList.GRASS_STAIRS);
+                ModBlocks.GRASS_SLAB, ModBlocks.VERTICAL_GRASS_SLAB, ModBlocks.GRASS_STAIRS);
 
         itemcolors.register((stack, tintindex) -> {
                     IBlockState iblockstate = ((ItemBlock)stack.getItem()).getBlock().getDefaultState();
                     return blockcolors.getColor(iblockstate, null, null, tintindex); },
-                BlockList.GRASS_SLAB, BlockList.VERTICAL_GRASS_SLAB, BlockList.GRASS_STAIRS);
+                ModBlocks.GRASS_SLAB, ModBlocks.VERTICAL_GRASS_SLAB, ModBlocks.GRASS_STAIRS);
     }
 
     public World getClientWorld() { return MC.world; }
