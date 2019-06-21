@@ -1,29 +1,29 @@
-{ 
+{
   "parent": "minecraft:recipes/root",
   "rewards": {
-    "recipes": [ 
-      "extendedslabs:vertical_cut_sandstone_slab"
+    "recipes": [
+      "extendedslabs:cut_sandstone_stairs"
     ]
   },
   "criteria": {
-    "has_slab": {
+    "has_stairs": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
-          { "item": "minecraft:cut_sandstone_slab" }
+          { "item": "minecraft:cut_sandstone" }
         ]
       }
     },
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "extendedslabs:vertical_cut_sandstone_slab"
+        "recipe": "extendedslabs:cut_sandstone_stairs"
       }
     }
   },
   "requirements": [
     [
-      "has_slab",
+      "has_stairs",
       "has_the_recipe"
     ]
   ]
