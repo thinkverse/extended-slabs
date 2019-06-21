@@ -1,0 +1,14 @@
+{ "type": "crafting_shaped",
+  "pattern": [
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:diorite"
+    }
+  },
+  "result": {
+    "item": "extendedslabs:diorite_slab",
+    "count": 6
+  }
+}

@@ -1,0 +1,9 @@
+{ "type": "minecraft:crafting_shapeless",
+  "group": "wooden_vertical_slab",
+  "ingredients": [
+    { "item": "extendedslabs:mossy_stone_bricks_slab" }
+  ],
+  "result": {
+    "item": "extendedslabs:vertical_mossy_stone_bricks_slab"
+  }
+}
