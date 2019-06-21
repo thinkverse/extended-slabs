@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[25,)"
+loaderVersion="[26,)"
 issueTrackerURL="https://github.com/thinkverse/extended-slabs/issues"
 
 [[mods]]
@@ -11,9 +11,7 @@ issueTrackerURL="https://github.com/thinkverse/extended-slabs/issues"
     logoFile="examplemod.png"
     credits="Clownvin, HarryTechRevs, SilentChaos512 & Champion Ash5357"
     authors="Thinkverse"
-    description='''
-    This mod adds vertical slabs and more to Minecraft.
-    '''
+    description='''This mod adds vertical slabs and more to Minecraft.'''
 
 [[dependencies.versecraft]]
     modId="forge"
