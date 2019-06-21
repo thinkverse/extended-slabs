@@ -25,7 +25,7 @@ import net.minecraft.world.IWorld;
 
 import javax.annotation.Nullable;
 
-public class BlockVerticalSlab extends Block implements IBucketPickupHandler, ILiquidContainer {
+public class BlockVerticalStairs extends Block implements IBucketPickupHandler, ILiquidContainer {
     public static final DirectionProperty FACING = BlockHorizontal.HORIZONTAL_FACING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final EnumProperty<VerticalSlabShape> SHAPE = EnumProperty.create("shape", VerticalSlabShape.class);
@@ -40,7 +40,7 @@ public class BlockVerticalSlab extends Block implements IBucketPickupHandler, IL
     protected static final VoxelShape SOUTH_OUTER_SHAPE = Block.makeCuboidShape(8.0D, 16.0D, 16.0D, 16.0D, 0.0D, 8.0D);
     protected static final VoxelShape WEST_OUTER_SHAPE  = Block.makeCuboidShape(0.0D, 16.0D, 8.0D, 8.0D, 0.0D, 16.0D);
 
-    public BlockVerticalSlab(Block.Properties builder) {
+    public BlockVerticalStairs(Block.Properties builder) {
         super(builder);
         this.setDefaultState(this.stateContainer.getBaseState().with(FACING, EnumFacing.NORTH).with(SHAPE, VerticalSlabShape.STRAIGHT).with(WATERLOGGED, Boolean.valueOf(false)));
     }
@@ -50,11 +50,6 @@ public class BlockVerticalSlab extends Block implements IBucketPickupHandler, IL
         builder.add(FACING, SHAPE, WATERLOGGED);
     }
 
-    @Override
-    @SuppressWarnings("deprecation")
-    public boolean isFullCube(IBlockState state) {
-        return false;
-    }
 
     @Override
     @SuppressWarnings("deprecation")
@@ -223,6 +218,12 @@ public class BlockVerticalSlab extends Block implements IBucketPickupHandler, IL
     }
 
     @Override
+    @SuppressWarnings("deprecation")
+    public boolean isFullCube(IBlockState state) {
+        return false;
+    }
+
+    @Override
     public Fluid pickupFluid(IWorld worldIn, BlockPos pos, IBlockState state) {
         if (state.get(WATERLOGGED)) {
             worldIn.setBlockState(pos, state.with(WATERLOGGED, Boolean.valueOf(false)), 3);
@@ -256,5 +257,4 @@ public class BlockVerticalSlab extends Block implements IBucketPickupHandler, IL
             return false;
         }
     }
-
 }
