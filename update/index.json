@@ -8,7 +8,7 @@
   },
   "1.13.2": {
     "0.6.0-beta": "update: refactored blocks to use enums, should fix Null pointers, 
-    fix(lang): item group now display correct mod name"
+fix(lang): item group now display correct mod name"
   },
   "1.14.2": {
     "0.2.0-alpha": "forge update"
