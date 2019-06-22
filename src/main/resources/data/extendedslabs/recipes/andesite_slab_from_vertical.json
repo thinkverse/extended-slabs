@@ -1,0 +1,8 @@
+{ "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "extendedslabs:vertical_andesite_slab" }
+  ],
+  "result": {
+    "item": "minecraft:andesite_slab"
+  }
+}

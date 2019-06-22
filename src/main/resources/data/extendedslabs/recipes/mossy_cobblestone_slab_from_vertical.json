@@ -1,0 +1,8 @@
+{ "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "extendedslabs:vertical_mossy_cobblestone_slab" }
+  ],
+  "result": {
+    "item": "minecraft:mossy_cobblestone_slab"
+  }
+}
