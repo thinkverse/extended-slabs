@@ -2,6 +2,12 @@
 
 #### BETA
 
+**0.6.1**
+
+update(recipes): vertical slabs can now be crafted in to regular slabs
+
+fix(lang): item group now display correct mod name 
+
 **0.6.0**
 
 update: refactored blocks to use enums, should fix Null pointers
