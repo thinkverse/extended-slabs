@@ -1,13 +1,13 @@
 {
   "homepage": "https://minecraft.curseforge.com/projects/extended-slabs",
   "promos": {
-    "1.13.2-latest": "0.6.0-beta",
+    "1.13.2-latest": "0.6.1-beta",
     "1.14.2-latest": "0.3.1-beta",
-    "1.13.2-recommended": "0.6.0-beta",
+    "1.13.2-recommended": "0.6.1-beta",
     "1.14.2-recommended": "0.3.1-beta"
   },
   "1.13.2": {
-    "0.6.0-beta": "update: refactored blocks to use enums, should fix Null pointers.\nfix(lang): item group now display correct mod name."
+    "0.6.1-beta": "update(recipes): vertical slabs can now be crafted in to regular slabs.\nfix(lang): item group now display correct mod name."
   },
   "1.14.2": {
     "0.3.1-beta": "fix: added loot tables.\nfix(recipes): vertical slabs can now become regular slabs.\nupdate(forge): version 26.0.43"
