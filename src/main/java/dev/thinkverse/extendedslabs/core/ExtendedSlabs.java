@@ -9,11 +9,8 @@ import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.util.Optional;
-import java.util.Random;
 
 @Mod(ExtendedSlabs.MODID)
 public class ExtendedSlabs
@@ -21,17 +18,11 @@ public class ExtendedSlabs
     public static final String MODID = "extendedslabs";
     public static final String VERSION = "0.6.1-beta";
 
-    public static ExtendedSlabs INSTANCE;
-
     public static CommonProxy PROXY = DistExecutor.runForDist(() -> () -> new ClientProxy(), () -> () -> new CommonProxy());
 
-    public static final Logger LOGGER = LogManager.getLogger(MODID);
     public static final ItemGroup GROUP = new CreativeTab();
-    public static final Random RANDOM = new Random();
 
     public ExtendedSlabs() {
-        INSTANCE = this;
-
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::OnLoadComplete);
     }
 
