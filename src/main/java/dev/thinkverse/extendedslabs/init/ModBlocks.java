@@ -1,5 +1,6 @@
 package dev.thinkverse.extendedslabs.init;
 
+import dev.thinkverse.extendedslabs.api.block.ModCorners;
 import dev.thinkverse.extendedslabs.api.block.ModSlabs;
 import dev.thinkverse.extendedslabs.api.block.ModStairs;
 import dev.thinkverse.extendedslabs.api.block.ModVerticalSlabs;
@@ -45,6 +46,10 @@ public class ModBlocks {
 
         for (ModStairs Stairs : ModStairs.VALUES) {
             register(Stairs.getName() + "_stairs", Stairs.getStairs());
+        }
+
+        for (ModCorners Corners : ModCorners.VALUES) {
+            register(Corners.getName() + "_corner", Corners.getCornerBlock());
         }
     }
 

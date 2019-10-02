@@ -1,0 +1,5 @@
+{ "parent": "extendedslabs:block/corners/corner",
+  "textures": {
+    "block": "minecraft:block/oak_planks"
+  }
+}
