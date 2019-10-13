@@ -1,53 +1,44 @@
--------------------------------------------
-Source installation information for modders
--------------------------------------------
-This code follows the Minecraft Forge installation methodology. It will apply
-some small patches to the vanilla MCP source code, giving you and it access 
-to some of the data and functions you need to build a successful mod.
+<h1 align="center">
+  Welcome to Extended Slabs 👋
+</h1>
+<p>
+  <a href="https://github.com/thinkverse/extended-slabs#readme">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" target="_blank" />
+  </a>
+  <a href="https://github.com/thinkverse/extended-slabs/graphs/commit-activity">
+    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" target="_blank" />
+  </a>
+  <a href="https://github.com/thinkverse/extended-slabs/blob/master/LICENSE">
+    <img alt="License: LGPL v2.1" src="https://img.shields.io/badge/License-LGPL%20v2.1-blue.svg" target="_blank" />
+  </a>
+</p>
 
-Note also that the patches are built against "unrenamed" MCP source code (aka
-srgnames) - this means that you will not be able to read them directly against
-normal code.
+### 🏠 [Homepage](https://thinkverse.dev/extended-slabs/)
 
-Source pack installation information:
+> Description
 
-Standalone source installation
-==============================
+### 📂 [Download](https://www.curseforge.com/minecraft/mc-mods/extended-slabs)
 
-See the Forge Documentation online for more detailed instructions:
-http://mcforge.readthedocs.io/en/latest/gettingstarted/
+<p>
+  <img src="https://cf.way2muchnoise.eu/full_extended-slabs_downloads.svg" />
+  <img src="https://cf.way2muchnoise.eu/versions/extended-slabs.svg" />
+</p>
 
-Step 1: Open your command-line and browse to the folder where you extracted the zip file.
+## Author
 
-Step 2: You're left with a choice.
-If you prefer to use Eclipse:
-1. Run the following command: "gradlew genEclipseRuns" (./gradlew genEclipseRuns if you are on Mac/Linux)
-2. Open Eclipse, Import > Existing Gradle Project > Select Folder 
-   or run "gradlew eclipse" to generate the project.
-(Current Issue)
-4. Open Project > Run/Debug Settings > Edit runClient and runServer > Environment
-5. Edit MOD_CLASSES to show [modid]%%[Path]; 2 times rather then the generated 4.
+👤 **Thinkverse**
 
-If you prefer to use IntelliJ:
-1. Open IDEA, and import project.
-2. Select your build.gradle file and have it import.
-3. Run the following command: "gradlew genIntellijRuns" (./gradlew genIntellijRuns if you are on Mac/Linux)
-4. Refresh the Gradle Project in IDEA if required.
+* Twitter: [@thinkverse](https://twitter.com/thinkverse)
+* Github: [@thinkverse](https://github.com/thinkverse)
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can run "gradlew --refresh-dependencies" to refresh the local cache. "gradlew clean" to reset everything {this does not affect your code} and then start the processs again.
+## 🤝 Contributing
 
-Should it still not work, 
-Refer to #ForgeGradle on EsperNet for more information about the gradle environment.
-or the Forge Project Discord discord.gg/UvedJ9m
+Contributions, issues and feature requests are welcome !<br />Feel free to check [issues page](https://github.com/thinkverse/Extended-Slabs/issues).
 
-Forge source installation
-=========================
-MinecraftForge ships with this code and installs it as part of the forge
-installation process, no further action is required on your part.
+## 📝 License
 
-LexManos' Install Video
-=======================
-https://www.youtube.com/watch?v=8VEdtQLuLO0&feature=youtu.be
+Copyright © 2019 [Thinkverse](https://github.com/thinkverse).<br />
+This project is [LGPL v2.1](https://github.com/thinkverse/extended-slabs/blob/master/LICENSE) licensed.
 
-For more details update more often refer to the Forge Forums:
-http://www.minecraftforge.net/forum/index.php/topic,14048.0.html
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
