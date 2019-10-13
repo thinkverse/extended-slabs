@@ -1,5 +1,6 @@
 package dev.thinkverse.extendedslabs.init;
 
+import dev.thinkverse.extendedslabs.api.block.ModCorners;
 import dev.thinkverse.extendedslabs.api.block.ModSlabs;
 import dev.thinkverse.extendedslabs.api.block.ModStairs;
 import dev.thinkverse.extendedslabs.api.block.ModVerticalSlabs;
@@ -15,6 +16,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import javax.annotation.Nullable;
@@ -45,6 +47,10 @@ public class ModBlocks {
 
         for (ModStairs Stairs : ModStairs.VALUES) {
             register(Stairs.getName() + "_stairs", Stairs.getStairs());
+        }
+
+        for (ModCorners Corners : ModCorners.VALUES) {
+            register(Corners.getName() + "_corner", Corners.getCornerBlock());
         }
     }
 
