@@ -1,0 +1,30 @@
+{ 
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [ 
+      "extendedslabs:mycelium_stairs"
+    ]
+  },
+  "criteria": {
+    "has_stairs": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "item": "minecraft:mycelium" }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extendedslabs:mycelium_stairs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_stairs",
+      "has_the_recipe"
+    ]
+  ]
+}
