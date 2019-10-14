@@ -26,23 +26,30 @@ public class ModBlocks {
     public static Block GRASS_STAIRS;
     public static Block GRASS_SLAB;
 
+    public static Block VERTICAL_PODZOL_SLAB;
+    public static Block PODZOL_STAIRS;
+    public static Block PODZOL_SLAB;
+
     @SubscribeEvent
     public static void RegisterModBlock(final RegistryEvent.Register<Block> event) {
         if (!event.getName().equals(ForgeRegistries.BLOCKS.getRegistryName())) return;
 
+        VERTICAL_PODZOL_SLAB = register("vertical_podzol_slab", new BlockVerticalGrassSlab(Block.Properties.from(Blocks.PODZOL)));
         VERTICAL_GRASS_SLAB = register("vertical_grass_slab", new BlockVerticalGrassSlab(Block.Properties.from(Blocks.GRASS_BLOCK)));
 
         for (ModVerticalSlabs VerticalSlab : ModVerticalSlabs.VALUES) {
             register("vertical_" + VerticalSlab.getName() + "_slab", VerticalSlab.getVerticalSlab());
         }
 
+        PODZOL_SLAB = register("podzol_slab", new BlockGrassSlab(Block.Properties.from(Blocks.PODZOL)));
         GRASS_SLAB = register("grass_slab", new BlockGrassSlab(Block.Properties.from(Blocks.GRASS_BLOCK)));
 
         for (ModSlabs Slab : ModSlabs.VALUES) {
             register(Slab.getName() + "_slab", Slab.getSlab());
         }
 
-        GRASS_STAIRS = register("grass_stairs", new BlockGrassStairs(Blocks.GRASS_BLOCK.getDefaultState() ,Block.Properties.from(Blocks.GRASS_BLOCK)));
+        PODZOL_STAIRS = register("podzol_stairs", new BlockGrassStairs(Blocks.PODZOL.getDefaultState(), Block.Properties.from(Blocks.PODZOL)));
+        GRASS_STAIRS = register("grass_stairs", new BlockGrassStairs(Blocks.GRASS_BLOCK.getDefaultState(), Block.Properties.from(Blocks.GRASS_BLOCK)));
 
         for (ModStairs Stairs : ModStairs.VALUES) {
             register(Stairs.getName() + "_stairs", Stairs.getStairs());
