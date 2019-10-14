@@ -61,6 +61,7 @@ public class BlockCorners extends Block implements IBucketPickupHandler, ILiquid
     }
 
     @Override
+    @SuppressWarnings("deprecation")
     public VoxelShape getShape(IBlockState state, IBlockReader worldIn, BlockPos pos) {
         EnumFacing enumFacing = state.get(FACING);
         switch (enumFacing) {
@@ -92,6 +93,7 @@ public class BlockCorners extends Block implements IBucketPickupHandler, ILiquid
     }
 
     @Override
+    @SuppressWarnings("deprecation")
     public IBlockState updatePostPlacement(IBlockState stateIn, EnumFacing facing, IBlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos) {
         if (stateIn.get(WATERLOGGED)) {
             worldIn.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));
