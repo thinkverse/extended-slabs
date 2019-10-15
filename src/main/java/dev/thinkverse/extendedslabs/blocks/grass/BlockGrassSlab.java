@@ -9,9 +9,7 @@ import net.minecraftforge.common.ToolType;
 import javax.annotation.Nullable;
 
 public class BlockGrassSlab extends BlockSlab {
-    public BlockGrassSlab(Block.Properties builder) {
-        super(builder);
-    }
+    public BlockGrassSlab(Block.Properties builder) { super(builder); }
 
     @Override
     public BlockRenderLayer getRenderLayer() {

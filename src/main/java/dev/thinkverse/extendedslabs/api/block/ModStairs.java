@@ -28,7 +28,9 @@ public enum ModStairs {
     RED_NETHER_BRICKS(Blocks.RED_NETHER_BRICKS),
     END_STONE_BRICKS(Blocks.END_STONE_BRICKS),
     CUT_SANDSTONE(Blocks.CUT_SANDSTONE),
-    CUT_RED_SANDSTONE(Blocks.CUT_RED_SANDSTONE);
+    CUT_RED_SANDSTONE(Blocks.CUT_RED_SANDSTONE),
+    PODZOL(Blocks.PODZOL),
+    MYCELIUM(Blocks.MYCELIUM);
 
     public static final ModStairs[] VALUES = values();
 
