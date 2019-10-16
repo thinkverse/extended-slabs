@@ -100,7 +100,7 @@ public class BlockVerticalSlab extends Block implements IBucketPickupHandler, IL
         }
     }
 
-    private static VoxelShape getStraightFacingShapes(EnumFacing facing) {
+    protected VoxelShape getStraightFacingShapes(EnumFacing facing) {
         switch (facing) {
             case WEST:
                 return (VoxelShape) WEST_SHAPE;
@@ -113,7 +113,7 @@ public class BlockVerticalSlab extends Block implements IBucketPickupHandler, IL
         }
     }
 
-    private static VoxelShape getOuterLeftFacingShapes(EnumFacing facing) {
+    protected VoxelShape getOuterLeftFacingShapes(EnumFacing facing) {
         switch (facing) {
             case WEST:
                 return (VoxelShape) WEST_OUTER_SHAPE;
@@ -126,7 +126,7 @@ public class BlockVerticalSlab extends Block implements IBucketPickupHandler, IL
         }
     }
 
-    private static VoxelShape getInnerLeftFacingShapes(EnumFacing facing) {
+    protected VoxelShape getInnerLeftFacingShapes(EnumFacing facing) {
         switch (facing) {
             case WEST:
                 return (VoxelShape) VoxelShapes.or(WEST_SHAPE, SOUTH_SHAPE);
@@ -139,7 +139,7 @@ public class BlockVerticalSlab extends Block implements IBucketPickupHandler, IL
         }
     }
 
-    private static VoxelShape getOuterRightFacingShapes(EnumFacing facing) {
+    protected VoxelShape getOuterRightFacingShapes(EnumFacing facing) {
         switch (facing) {
             case WEST:
                 return (VoxelShape) NORTH_OUTER_SHAPE;
@@ -152,7 +152,7 @@ public class BlockVerticalSlab extends Block implements IBucketPickupHandler, IL
         }
     }
 
-    private static VoxelShape getInnerRightFacingShapes(EnumFacing facing) {
+    protected VoxelShape getInnerRightFacingShapes(EnumFacing facing) {
         switch (facing) {
             case WEST:
                 return (VoxelShape) VoxelShapes.or(WEST_SHAPE, NORTH_SHAPE);

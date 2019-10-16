@@ -8,6 +8,7 @@ import dev.thinkverse.extendedslabs.blocks.grass.BlockGrassSlab;
 import dev.thinkverse.extendedslabs.blocks.grass.BlockGrassStairs;
 import dev.thinkverse.extendedslabs.blocks.grass.BlockVerticalGrassSlab;
 import dev.thinkverse.extendedslabs.blocks.path.BlockPathSlab;
+import dev.thinkverse.extendedslabs.blocks.path.BlockVerticalPathSlab;
 import dev.thinkverse.extendedslabs.core.ExtendedSlabs;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
@@ -27,12 +28,14 @@ public class ModBlocks {
     public static Block GRASS_STAIRS;
     public static Block GRASS_SLAB;
 
+    public static Block VERTICAL_GRASS_PATH_SLAB;
     public static Block GRASS_PATH_SLAB;
 
     @SubscribeEvent
     public static void RegisterModBlock(final RegistryEvent.Register<Block> event) {
         if (!event.getName().equals(ForgeRegistries.BLOCKS.getRegistryName())) return;
 
+        VERTICAL_GRASS_PATH_SLAB = register("vertical_grass_path_slab", new BlockVerticalPathSlab(Block.Properties.from(Blocks.GRASS_PATH)));
         VERTICAL_GRASS_SLAB = register("vertical_grass_slab", new BlockVerticalGrassSlab(Block.Properties.from(Blocks.GRASS_BLOCK)));
 
         for (ModVerticalSlabs VerticalSlab : ModVerticalSlabs.VALUES) {
