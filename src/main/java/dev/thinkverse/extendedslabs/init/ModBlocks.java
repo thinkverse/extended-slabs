@@ -8,6 +8,7 @@ import dev.thinkverse.extendedslabs.blocks.grass.BlockGrassSlab;
 import dev.thinkverse.extendedslabs.blocks.grass.BlockGrassStairs;
 import dev.thinkverse.extendedslabs.blocks.grass.BlockVerticalGrassSlab;
 import dev.thinkverse.extendedslabs.blocks.path.BlockPathSlab;
+import dev.thinkverse.extendedslabs.blocks.path.BlockPathStairs;
 import dev.thinkverse.extendedslabs.blocks.path.BlockVerticalPathSlab;
 import dev.thinkverse.extendedslabs.core.ExtendedSlabs;
 import net.minecraft.block.Block;
@@ -29,6 +30,7 @@ public class ModBlocks {
     public static Block GRASS_SLAB;
 
     public static Block VERTICAL_GRASS_PATH_SLAB;
+    public static Block GRASS_PATH_STAIRS;
     public static Block GRASS_PATH_SLAB;
 
     @SubscribeEvent
@@ -49,6 +51,7 @@ public class ModBlocks {
             register(Slab.getName() + "_slab", Slab.getSlab());
         }
 
+        GRASS_PATH_STAIRS = register("grass_path_stairs", new BlockPathStairs(Blocks.GRASS_PATH.getDefaultState(), Block.Properties.from(Blocks.GRASS_PATH)));
         GRASS_STAIRS = register("grass_stairs", new BlockGrassStairs(Blocks.GRASS_BLOCK.getDefaultState(), Block.Properties.from(Blocks.GRASS_BLOCK)));
 
         for (ModStairs Stairs : ModStairs.VALUES) {
