@@ -1,0 +1,8 @@
+{ "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "extendedslabs:grass_path_corner" }
+  ],
+  "result": {
+    "item": "extendedslabs:grass_path_stairs"
+  }
+}

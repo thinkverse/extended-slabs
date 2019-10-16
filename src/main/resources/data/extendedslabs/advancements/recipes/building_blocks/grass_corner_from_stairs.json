@@ -1,0 +1,31 @@
+{ "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extendedslabs:grass_corner_from_stairs"
+    ]
+  },
+  "criteria": {
+    "has_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extendedslabs:grass_stairs"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extendedslabs:grass_corner_from_stairs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_slab",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -63,17 +63,13 @@
 			"scale": [0.375, 0.375, 0.375]
 		},
 		"firstperson_righthand": {
-			"rotation": [0, -90, 0],
-			"scale": [0.6, 0.6, 0.6]
-		},
-		"firstperson_lefthand": {
-			"scale": [0.6, 0.6, 0.6]
+			"rotation": [0, -90, 0]
 		},
 		"ground": {
 			"scale": [0.375, 0.375, 0.375]
 		},
 		"gui": {
-			"rotation": [25, -45, 0],
+			"rotation": [35, -45, 0],
 			"translation": [0, -1.25, 0],
 			"scale": [0.625, 0.625, 0.625]
 		},
