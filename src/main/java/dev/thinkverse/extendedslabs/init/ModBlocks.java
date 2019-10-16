@@ -4,9 +4,11 @@ import dev.thinkverse.extendedslabs.api.block.ModCorners;
 import dev.thinkverse.extendedslabs.api.block.ModSlabs;
 import dev.thinkverse.extendedslabs.api.block.ModStairs;
 import dev.thinkverse.extendedslabs.api.block.ModVerticalSlabs;
+import dev.thinkverse.extendedslabs.blocks.grass.BlockGrassCorner;
 import dev.thinkverse.extendedslabs.blocks.grass.BlockGrassSlab;
 import dev.thinkverse.extendedslabs.blocks.grass.BlockGrassStairs;
 import dev.thinkverse.extendedslabs.blocks.grass.BlockVerticalGrassSlab;
+import dev.thinkverse.extendedslabs.blocks.path.BlockPathCorner;
 import dev.thinkverse.extendedslabs.blocks.path.BlockPathSlab;
 import dev.thinkverse.extendedslabs.blocks.path.BlockPathStairs;
 import dev.thinkverse.extendedslabs.blocks.path.BlockVerticalPathSlab;
@@ -26,10 +28,12 @@ import javax.annotation.Nullable;
 @Mod.EventBusSubscriber(modid = ExtendedSlabs.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModBlocks {
     public static Block VERTICAL_GRASS_SLAB;
+    public static Block GRASS_CORNER;
     public static Block GRASS_STAIRS;
     public static Block GRASS_SLAB;
 
     public static Block VERTICAL_GRASS_PATH_SLAB;
+    public static Block GRASS_PATH_CORNER;
     public static Block GRASS_PATH_STAIRS;
     public static Block GRASS_PATH_SLAB;
 
@@ -57,6 +61,9 @@ public class ModBlocks {
         for (ModStairs Stairs : ModStairs.VALUES) {
             register(Stairs.getName() + "_stairs", Stairs.getStairs());
         }
+
+        GRASS_PATH_CORNER = register("grass_path_corner", new BlockPathCorner(Block.Properties.from(Blocks.GRASS_PATH)));
+        GRASS_CORNER = register("grass_corner", new BlockGrassCorner(Block.Properties.from(Blocks.GRASS_BLOCK)));
 
         for (ModCorners Corners : ModCorners.VALUES) {
             register(Corners.getName() + "_corner", Corners.getCornerBlock());

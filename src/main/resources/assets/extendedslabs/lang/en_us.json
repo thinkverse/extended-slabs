@@ -5,6 +5,8 @@
 
   "itemGroup.extendedslabs": "Extended Slabs",
 
+  "block.extendedslabs.grass_path_corner": "Grass Path Corner",
+  "block.extendedslabs.grass_corner": "Grass Corner",
   "block.extendedslabs.oak_corner": "Oak Corner",
 
   "block.extendedslabs.polished_andesite_stairs": "Polished Andesite Stairs",
